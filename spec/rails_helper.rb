@@ -28,7 +28,9 @@ RSpec.configure do |config|
   # config.filter_gems_from_backtrace("gem name")
   # save_and_open_pageを失敗時のみ使用するための設定
   config.after do |example|
-    if (example.metadata[:type] == :feature) && example.exception.present? && (example.metadata[:open_on_error] == true)
+    if (example.metadata[:type] == :feature) &&
+        example.exception.present? &&
+       (example.metadata[:open_on_error] == true)
     end
   end
 end
