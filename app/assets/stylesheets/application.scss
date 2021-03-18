@@ -1,0 +1,177 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+//header//
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: "Hiragino Mincho ProN", "ヒラギノ明朝 ProN",
+    "Hiragino Mincho Pro", "ヒラギノ明朝 Pro", sans-serif;
+  color: #252525;
+  font-weight: 400;
+}
+
+.navbar-brand {
+  background-image: url("images/logo-2.jpg");
+  background-size: contain;
+  height: 40px;
+  width: 73px;
+}
+
+.navbar-nav {
+  font-size: 1.5rem;
+  letter-spacing: 0.5rem;
+}
+
+.nav-btn {
+  // padding: 5px 5px;
+  margin: 4px;
+}
+
+//top-image//
+
+.wrapper {
+  min-height: 100vh;
+  position: relative;
+  padding-bottom: 55px;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.jumbotron {
+  background: url("images/top.jpg") center no-repeat;
+  background-size: cover;
+  height: 600px;
+  margin-top: 60px;
+  border-radius: 0rem;
+  margin-bottom: 0px;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Shippori+Mincho&display=swap");
+.mendou-font {
+  font-family: "Shippori Mincho", serif;
+  font-size: 4rem;
+  letter-spacing: 1rem;
+  margin-top: 180px;
+  line-height: 70px;
+}
+
+.btn-flat-border {
+  margin-top: 5rem;
+  padding: 0.4rem 1rem;
+  text-decoration: none;
+  background: #9e0221;
+  color: white;
+  transition: 0.4s;
+  font-size: 2rem;
+  text-align: center;
+  letter-spacing: 1rem;
+}
+
+.btn-flat-border:hover {
+  background: rgba(255, 255, 255, 0.308);
+  color: #9e0221;
+  border: solid 2px #9e0221;
+  border-radius: 3px;
+}
+
+//ABOUT//
+
+.red-container {
+  height: 450px;
+  width: 100%;
+  background-color: #9e0221;
+  margin: 0px;
+}
+
+.title {
+  color: #fff;
+  padding-top: 5rem;
+  margin-bottom: 1rem;
+  position: relative;
+  letter-spacing: 1rem;
+  font-size: 3rem;
+}
+
+.title::before {
+  content: " ";
+  position: absolute;
+  bottom: -2rem;
+  width: 5rem;
+  height: 2px;
+  left: 50%;
+  background-color: #fff;
+  transform: translateX(-50%);
+}
+
+.title-msg {
+  color: #fff;
+  font-size: 2rem;
+  letter-spacing: 1rem;
+  font-weight: 100;
+  margin-top: 50px;
+  line-height: 60px;
+}
+//fixed-btn//
+.fixed-btn {
+  width: 7rem;
+  height: 7rem;
+  border-radius: 50%;
+  background-color: #fff;
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  z-index: 1;
+  text-align: center;
+  line-height: 8.5rem;
+}
+
+.fixed-btn:hover {
+  opacity: 0.85;
+}
+.red-icon {
+  color: #9e0221;
+  opacity: 0.8;
+  font-size: 4rem;
+}
+//footer//
+
+footer {
+  width: 100%;
+  background-color: #2e2b2b;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  position: absolute;
+  bottom: 0px;
+}
+
+//ログイン//
+
+.white-container {
+  height: 450px;
+  width: 100%;
+  margin: 0px;
+}
+
+.black-text-title {
+  color: black;
+}
+
+.form-center {
+  width: 300px;
+}
