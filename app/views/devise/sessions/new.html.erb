@@ -1,47 +1,27 @@
 <div class="row white-container">
-  <div class="col align-self-center form-center">
+  <div class="col offset-4 col-4">
     <h2 class="title black-text-title">ログイン</h2>
-
     <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-    <div class="field">
-      <%= f.label :email %><br />
-      <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-    </div>
-
-    <div class="field">
-      <%= f.label :password %><br />
-      <%= f.password_field :password, autocomplete: "current-password" %>
-    </div>
-
-    <% if devise_mapping.rememberable? %>
-    <div class="field">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
+    <div class="col align-self-center form-size field">
+      <div class="form-group field">
+        <%= f.label :メールアドレス %><br />
+        <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control", placeholder: "example@xxx.com" %>
+      </div>
+      <div class="form-group field">
+        <%= f.label :パスワード %><br />
+        <%= f.password_field :password, autofocus: true, autocomplete: "current-password", class: "form-control", placeholder: "６文字以上の英数字を入力してください"%>
+      </div>
+      <% if devise_mapping.rememberable? %>
+      <div class="field form-group form-check field">
+        <%= f.check_box :remember_me, class: "form-check-input" %>
+        <%= f.label :ログイン状態を保持する, class: "form-check-label" %>
+      </div>
+      <% end %>
+      <div class="btn-center" type="submit">
+        <%= f.submit "ログイン", class: "btn btn-primary submit-btn" %>
+      </div>
     </div>
     <% end %>
-
-    <div class="actions">
-      <%= f.submit "Log in" %>
-    </div>
-    <% end %>
-
-    <form>
-      <div class="form-group">
-        <label for="exampleInputEmail1">Email address</label>
-        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-      </div>
-      <div class="form-group">
-        <label for="exampleInputPassword1">Password</label>
-        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-      </div>
-      <div class="form-group form-check">
-        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-        <label class="form-check-label" for="exampleCheck1">Check me out</label>
-      </div>
-      <button type="submit" class="btn btn-primary">Submit</button>
-    </form>
-
     <%= render "devise/shared/links" %>
   </div>
 </div>

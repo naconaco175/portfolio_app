@@ -23,13 +23,14 @@ body {
     "Hiragino Mincho Pro", "ヒラギノ明朝 Pro", sans-serif;
   color: #252525;
   font-weight: 400;
+  padding-top: 35px;
 }
 
 .navbar-brand {
   background-image: url("images/logo-2.jpg");
   background-size: contain;
-  height: 40px;
-  width: 73px;
+  height: 38px;
+  width: 72px;
 }
 
 .navbar-nav {
@@ -37,9 +38,36 @@ body {
   letter-spacing: 0.5rem;
 }
 
+.navbar-nav {
+  margin: 0;
+}
+
 .nav-btn {
-  // padding: 5px 5px;
   margin: 4px;
+}
+
+//フラッシュ//
+
+.flash {
+  margin-top: 7px;
+  height: 40px;
+}
+.notice {
+  background-color: rgb(113, 207, 113);
+  color: black;
+  text-align: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.alert {
+  background-color: #f26f6f;
+  color: white;
+  text-align: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  font-size: 1.5rem;
 }
 
 //top-image//
@@ -56,7 +84,6 @@ body {
   background: url("images/top.jpg") center no-repeat;
   background-size: cover;
   height: 600px;
-  margin-top: 60px;
   border-radius: 0rem;
   margin-bottom: 0px;
 }
@@ -138,6 +165,7 @@ body {
   z-index: 1;
   text-align: center;
   line-height: 8.5rem;
+  box-shadow: 0 10px 25px 0 rgba(0, 0, 0, 0.5);
 }
 
 .fixed-btn:hover {
@@ -145,8 +173,8 @@ body {
 }
 .red-icon {
   color: #9e0221;
-  opacity: 0.8;
-  font-size: 4rem;
+  opacity: 0.7;
+  font-size: 3rem;
 }
 //footer//
 
@@ -163,15 +191,81 @@ footer {
 //ログイン//
 
 .white-container {
-  height: 450px;
+  height: 630px;
   width: 100%;
   margin: 0px;
 }
 
 .black-text-title {
   color: black;
+  text-align: center;
 }
 
-.form-center {
-  width: 300px;
+.black-text-title::before {
+  background-color: #9e0221;
+}
+
+form {
+  width: 400px;
+}
+
+.form-size {
+  font-size: 1.5rem;
+  margin-top: 6rem;
+}
+
+.form-control {
+  margin-bottom: 2rem;
+}
+
+.form-check-label {
+  margin-left: 1rem;
+}
+
+.btn-center {
+  text-align: center;
+  margin-top: 4rem;
+}
+
+.submit-btn {
+  letter-spacing: 0.5rem;
+  font-size: 1.3rem;
+  padding: 0.5rem 1rem;
+}
+
+//認証リンク//
+
+.device-link-block {
+  margin-top: 2rem;
+  margin-left: 2rem;
+}
+
+.device-link {
+  font-size: 1.2rem;
+  display: inline-block;
+  margin-bottom: 0.7rem;
+}
+
+.device-link:hover {
+  text-decoration-line: none;
+}
+
+//ユーザー更新//
+
+.delete-btn {
+  font-size: 0.7rem;
+}
+
+.back-link {
+  margin-bottom: 3rem;
+}
+
+//エラーメッセージ//
+
+.error-count {
+  font-size: 1.5rem;
+  color: #9e0221;
+}
+.error-msg {
+  color: #9e0221;
 }
