@@ -119,7 +119,7 @@ body {
 //ABOUT//
 
 .red-container {
-  height: 450px;
+  height: 400px;
   width: 100%;
   background-color: #9e0221;
   margin: 0px;
@@ -128,10 +128,10 @@ body {
 .title {
   color: #fff;
   padding-top: 5rem;
-  margin-bottom: 1rem;
+  margin-bottom: 5rem;
   position: relative;
   letter-spacing: 1rem;
-  font-size: 3rem;
+  font-size: 2.7srem;
 }
 
 .title::before {
@@ -176,24 +176,14 @@ body {
   opacity: 0.7;
   font-size: 3rem;
 }
-//footer//
-
-footer {
-  width: 100%;
-  background-color: #2e2b2b;
-  color: #fff;
-  text-align: center;
-  padding: 20px 0;
-  position: absolute;
-  bottom: 0px;
-}
 
 //ログイン//
 
 .white-container {
-  height: 630px;
   width: 100%;
   margin: 0px;
+  display: block;
+  padding-bottom: 20px;
 }
 
 .black-text-title {
@@ -210,7 +200,7 @@ form {
 }
 
 .form-size {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   margin-top: 6rem;
 }
 
@@ -225,6 +215,11 @@ form {
 .btn-center {
   text-align: center;
   margin-top: 4rem;
+}
+
+.file-field {
+  outline-style: none;
+  padding-bottom: 2.5rem;
 }
 
 .submit-btn {
@@ -268,4 +263,20 @@ form {
 }
 .error-msg {
   color: #9e0221;
+}
+
+.error_explanation {
+  margin-bottom: 1rem;
+}
+
+//footer//
+
+footer {
+  width: 100%;
+  background-color: #2e2b2b;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  position: absolute;
+  bottom: 0px;
 }

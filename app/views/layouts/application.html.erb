@@ -30,7 +30,7 @@
           <%= link_to "TOP", root_path, class: "nav-link text-danger" %>
           <%= link_to "ABOT", root_path, class: "nav-link text-danger" %>
           <% if user_signed_in? %>
-          <%= link_to "MyPage", pages_show_path, class: "nav-link text-danger" %>
+          <%= link_to "MyPage", users_path, class: "nav-link text-danger" %>
           <%= link_to "投稿一覧", root_path, class: "nav-link text-danger" %>
           <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "btn btn-danger btn-sm nav-btn" %>
           <% else %>
