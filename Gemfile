@@ -39,8 +39,7 @@ gem 'devise-i18n-views'
 gem 'faker'
 gem 'gimei'
 gem 'mini_magick', '~> 4.8'
-gem 'will_paginate'
-gem 'bootstrap-will_paginate'
+gem 'kaminari'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

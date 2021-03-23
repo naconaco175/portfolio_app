@@ -10,7 +10,7 @@ User.create!(
   created_at:   DateTime.now
 )
 
-10.times do |n|
+32.times do |n|
   gimei = Gimei.new
 
   User.create!(

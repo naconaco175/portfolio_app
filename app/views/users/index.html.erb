@@ -2,33 +2,7 @@
 <div class="row white-container">
   <div class="col offset-3 col-6">
     <h2 class="title black-text-title">ユーザー一覧</h2>
-    <% @user.each do |user| %>
-    <div class="row user_info">
-      <div class="col-3">
-        <div class="row user_info">
-          <div class="col-3">
-            <% if user.image.attached? %>
-            <%= image_tag user.image.variant(resize_to_fill: [150, 150]) %>
-            <% else %>
-            <img class="user_image" , src="https://lh3.googleusercontent.com/proxy/88H9DcoPP-9PSs6r_F_bPmQEGg5lJCgxnpKrf5yPXxfBSW6bP251YHpHnLztqNutNXDkhKUD0g4rekjuEjKNoBaQ4JZFtEodDkPLepubFGyn-kHpTg" , alt="profile_image">
-            <% end %>
-          </div>
-          <div class="col-9">
-            <h4 class="user_name"><%= user.name %></h4>
-            <p class="user_profile"><%= user.profile %></p>
-          </div>
-        </div>
-      </div>
-      <div class="col-9">
-        <h4 class="user_name"><%= user.name %></h4>
-        <p class="user_profile"><%= user.profile %></p>
-        <div class="row">
-          <div class="col col-2">
-            <%= link_to "ユーザー", user_path(user), class: "btn btn-danger btn-sm user_btn" %>
-          </div>
-        </div>
-      </div>
-    </div>
-    <% end %>
+    <%= render partial: 'users', collection: @users, as: :user %>
+    <%= paginate @users%>
   </div>
 </div>
