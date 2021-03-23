@@ -280,3 +280,37 @@ footer {
   position: absolute;
   bottom: 0px;
 }
+
+//ユーザー情報//
+
+.user_info {
+  padding: 0.5em 1em;
+  margin: 2em 0;
+  color: #9e0221;
+  background: white;
+  border-top: solid 5px #9e0221;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.22);
+  height: 200px;
+}
+
+.user_image {
+  border-radius: 50%;
+  border: 3px #9e0221 solid;
+  margin-top: 3rem;
+  margin-left: 1rem;
+}
+
+.user_name {
+  font-weight: 300;
+  color: #252525;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.user_profile {
+  color: #252525;
+}
+
+.user_btn {
+  padding: 0.3rem 1rem;
+}

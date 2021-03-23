@@ -1,3 +1,4 @@
+<% provide(:title, "ユーザーの更新")%>
 <div class="row white-container">
   <div class="col offset-4 col-4">
     <h2 class="title black-text-title">ユーザーの更新・削除</h2>
@@ -12,32 +13,32 @@
 
       <div class="form-group field">
         <%= f.label :ユーザー名 %><br />
-        <%= f.text_field :name, class: "form-control", placeholder: "10文字以内で入力してください" %>
+        <%= f.text_field :name, autofocus: true, class: "form-control", placeholder: "10文字以内で入力してください" %>
       </div>
 
       <div class="form-group　field">
         <%= f.label :現在のパスワード %><i>（※必須）</i><br />
-        <%= f.password_field :current_password, autocomplete: "current-password", class: "form-control" %>
+        <%= f.password_field :current_password, autofocus: true, autocomplete: "current-password", class: "form-control" %>
       </div>
 
       <div class="form-group　field">
         <%= f.label :新しいパスワード %> <i>(変更のない場合は空欄)</i><br />
-        <%= f.password_field :password, autocomplete: "new-password", class: "form-control", placeholder: "６文字以上の英数字を入力してください" %>
+        <%= f.password_field :password, autofocus: true, autocomplete: "new-password", class: "form-control", placeholder: "６文字以上の英数字を入力してください" %>
       </div>
 
       <div class="form-group　field">
         <%= f.label :新しいパスワード確認用 %><br />
-        <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "form-control", placeholder: "６文字以上の英数字を入力してください" %>
+        <%= f.password_field :password_confirmation, autofocus: true, autocomplete: "new-password", class: "form-control", placeholder: "６文字以上の英数字を入力してください" %>
       </div>
 
       <div class="form-group field">
         <%= f.label :自己紹介 %><br />
-        <%= f.text_area :profile, class: "form-control text-field", rows: 5, placeholder: "好きなラーメンの系統やこだわりなど自分のプロフィールを書こう！(200文字以内)" %>
+        <%= f.text_area :profile, autofocus: true, class: "form-control text-field", rows: 5, placeholder: "好きなラーメンの系統やこだわりなど自分のプロフィールを書こう！(200文字以内)" %>
       </div>
 
       <div class="form-group field">
         <%= f.label :新しいプロフィール画像 %><br />
-        <%= f.file_field :image, class: "form-control file-field", placeholder: "６文字以上の英数字を入力してください" %>
+        <%= f.file_field :image, autofocus: true, class: "form-control file-field", placeholder: "６文字以上の英数字を入力してください" %>
       </div>
 
       <div class="btn-center" type="submit">
