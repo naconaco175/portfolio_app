@@ -298,6 +298,8 @@ footer {
   border: 3px #9e0221 solid;
   margin-top: 3rem;
   margin-left: 1rem;
+  height: 60px;
+  width: 60px;
 }
 
 .user_name {
@@ -313,4 +315,28 @@ footer {
 
 .user_btn {
   padding: 0.3rem 1rem;
+}
+
+//ページネーション//
+.pagination {
+  justify-content: center;
+}
+.pagination > li > a {
+  border: none;
+  color: #696969;
+}
+
+.pagination > li {
+  border-radius: 15px;
+}
+
+/* 表示しているページ番号のデザイン */
+.pagination > .active > a {
+  background: #f26f6f;
+  border-radius: 15px;
+}
+
+/*ホバー時のデザイン*/
+.pagination > li > a:hover {
+  border-radius: 15px;
 }
