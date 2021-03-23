@@ -1,9 +1,13 @@
 class User < ApplicationRecord
-  # Include default devise modules. Others available are:
-  # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable,
          :confirmable, :timeoutable, :trackable, :omniauthable, omniauth_providers:[:twitter]
+
+  validates :name,  presence: true, length: { maximum: 10 }
+  validates :profile,               length: { maximum: 200 }
+
+  has_one_attached :image
+
   def self.from_omniauth(auth)
     find_or_create_by(provider: auth["provider"], uid: auth["uid"]) do |user|
       user.provider = auth["provider"]
@@ -20,5 +24,9 @@ class User < ApplicationRecord
     else
       super
     end
+  end
+
+  def resize
+    return self.image.variant(resize: '300x300').processed
   end
 end
