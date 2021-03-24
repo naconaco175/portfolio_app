@@ -6,10 +6,12 @@ abort("The Rails environment is running in production mode!") if Rails.env.produ
 require 'rspec/rails'
 require 'factory_bot'
 require 'faker'
-# require 'spree/testing_support/factories'
-# require 'spree/testing_support/authorization_helpers'
-# require 'spree/testing_support/controller_requests'
+require'devise'
+require File.expand_path("spec/support/controller_macros.rb")
+require_relative 'support/controller_macros'
+
 Dir[Rails.root.join("spec/support/**/*.rb")].each { |file| require file }
+
 begin
   ActiveRecord::Migration.maintain_test_schema!
 rescue ActiveRecord::PendingMigrationError => e
@@ -19,6 +21,9 @@ end
 RSpec.configure do |config|
   config.include Devise::Test::IntegrationHelpers, type: :request
   config.include FactoryBot::Syntax::Methods
+  config.include Devise::Test::ControllerHelpers, type: :controller
+  config.include Devise::Test::IntegrationHelpers, type: :request
+  config.extend ControllerMacros, :type => :controller
   config.fixture_path = "#{::Rails.root}/spec/fixtures"
   config.use_transactional_fixtures = true
   config.infer_spec_type_from_file_location!
