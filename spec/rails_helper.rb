@@ -6,10 +6,9 @@ abort("The Rails environment is running in production mode!") if Rails.env.produ
 require 'rspec/rails'
 require 'factory_bot'
 require 'faker'
-require 'support/factory_bot'
-require 'spree/testing_support/factories'
-require 'spree/testing_support/authorization_helpers'
-require 'spree/testing_support/controller_requests'
+# require 'spree/testing_support/factories'
+# require 'spree/testing_support/authorization_helpers'
+# require 'spree/testing_support/controller_requests'
 Dir[Rails.root.join("spec/support/**/*.rb")].each { |file| require file }
 begin
   ActiveRecord::Migration.maintain_test_schema!
@@ -18,6 +17,7 @@ rescue ActiveRecord::PendingMigrationError => e
   exit 1
 end
 RSpec.configure do |config|
+  config.include Devise::Test::IntegrationHelpers, type: :request
   config.include FactoryBot::Syntax::Methods
   config.fixture_path = "#{::Rails.root}/spec/fixtures"
   config.use_transactional_fixtures = true
