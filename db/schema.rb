@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_22_134051) do
+ActiveRecord::Schema.define(version: 2021_03_24_123301) do
 
   create_table "active_storage_attachments", charset: "utf8mb4", force: :cascade do |t|
     t.string "name", null: false
@@ -60,7 +60,6 @@ ActiveRecord::Schema.define(version: 2021_03_22_134051) do
     t.string "provider"
     t.string "uid"
     t.string "username"
-    t.string "image"
     t.string "name"
     t.text "profile"
     t.index ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true

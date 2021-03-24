@@ -2,11 +2,14 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable,
          :confirmable, :timeoutable, :trackable, :omniauthable, omniauth_providers:[:twitter]
+  has_one_attached :avatar
 
-  validates :name,  presence: true, length: { maximum: 10 }
-  validates :profile,               length: { maximum: 200 }
+  validates :name,    length: { maximum: 10 },  presence: true
+  validates :profile, length: { maximum: 200 }
+  validates :avatar,    blob: { content_type: ['image/png', 'image/jpg', 'image/jpeg'],
+                  size_range: 1..5.megabytes }
 
-  has_one_attached :image
+
 
   def self.from_omniauth(auth)
     find_or_create_by(provider: auth["provider"], uid: auth["uid"]) do |user|

@@ -2,10 +2,10 @@
   <div class="col-3">
     <div class="row">
       <div class="col-3">
-        <% if user.image.attached? %>
-        <%= image_tag user.image.variant(resize_to_fill: [80, 80]), class: "user_image" %>
+        <% if user.avatar.attached? %>
+        <%= image_tag user.avatar.variant(gravity: "Center", resize:"90x90^",crop:"90x90+0+0").processed,alt: "user_image", class: "user_image"%>
         <% else %>
-        <img class="user_image" , src="https://lh3.googleusercontent.com/proxy/88H9DcoPP-9PSs6r_F_bPmQEGg5lJCgxnpKrf5yPXxfBSW6bP251YHpHnLztqNutNXDkhKUD0g4rekjuEjKNoBaQ4JZFtEodDkPLepubFGyn-kHpTg" , alt="profile_image">
+        <%= image_tag 'user_default.png', alt: "user_image", class: "user_default_image user_image"%>
         <% end %>
       </div>
     </div>
