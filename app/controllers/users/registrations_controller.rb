@@ -45,7 +45,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
     end
 
     def configure_permitted_parameters
-      devise_parameter_sanitizer.permit(:sign_up,        keys: [:name, :profile, %i(image)])
-      devise_parameter_sanitizer.permit(:account_update, keys: [:name, :profile, %i(image)])
+      devise_parameter_sanitizer.permit(:sign_up,        keys: [:name, :profile, %i(avatar)])
+      devise_parameter_sanitizer.permit(:account_update, keys: [:name, :profile, %i(avatar)])
     end
 end
