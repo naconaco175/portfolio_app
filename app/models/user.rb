@@ -6,10 +6,6 @@ class User < ApplicationRecord
 
   validates :name,    length: { maximum: 10 },  presence: true
   validates :profile, length: { maximum: 200 }
-  validates :avatar,    blob: { content_type: ['image/png', 'image/jpg', 'image/jpeg'],
-                  size_range: 1..5.megabytes }
-
-
 
   def self.from_omniauth(auth)
     find_or_create_by(provider: auth["provider"], uid: auth["uid"]) do |user|
