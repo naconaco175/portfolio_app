@@ -1,5 +1,9 @@
 FactoryBot.define do
-  factory :raman do
-    user { nil }
+  factory :ramen do
+    store     { "ramen-store" }
+    comment   { 'このお店は美味しい' }
+    after(:build) do |ramen|
+      ramen.photo.attach(io: File.open('app/assets/images/ra_men.jpg'), filename: 'ra_men.jpg')
+    end
   end
 end
