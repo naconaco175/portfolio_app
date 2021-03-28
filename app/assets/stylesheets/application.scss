@@ -344,3 +344,97 @@ footer {
 .pagination > li > a:hover {
   border-radius: 15px;
 }
+
+//投稿の詳細//
+
+.ramen_info {
+  width: 400px;
+  justify-content: center;
+  margin: 1rem auto;
+}
+
+.ramen_store {
+  font-size: 2.5rem;
+  border-bottom: solid 3px #d1b5b5;
+  position: relative;
+  margin-bottom: 0.5rem;
+}
+
+.ramen_price {
+  font-size: 0.8rem;
+}
+
+.ramen_store:after {
+  position: absolute;
+  content: " ";
+  display: block;
+  border-bottom: solid 3px #9e0221;
+  bottom: -3px;
+  width: 15%;
+}
+
+.ramen_name {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  display: inline-block;
+}
+
+.ramen_price {
+  display: inline;
+  font-size: 1.2rem;
+}
+
+.ramen_comment {
+  position: relative;
+  display: inline-block;
+  margin: 1rem 0;
+  padding: 7px 10px;
+  min-width: 120px;
+  max-width: 100%;
+  color: #555;
+  font-size: 1.5rem;
+  background: #f8f4f4;
+  border-radius: 8px;
+}
+
+.ramen_comment:before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  left: 10%;
+  margin-left: -15px;
+  border: 10px solid transparent;
+  border-bottom: 15px solid #f8f4f4;
+}
+
+.ramen_comment p {
+  margin: 0;
+  padding: 0;
+}
+
+.rigth-content {
+  text-align: right;
+}
+
+.ramen-time {
+  text-align: right;
+  color: #2e2b2b;
+}
+
+//最近の投稿//
+
+.ramen-post {
+  margin-left: 2px;
+}
+
+.ramen_info {
+  width: 300px;
+}
+
+.ramen_store {
+  font-size: 1rem;
+}
+
+.ramen_comment {
+  font-size: 0.5rem;
+}

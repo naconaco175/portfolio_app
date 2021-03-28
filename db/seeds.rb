@@ -35,6 +35,6 @@ users.each { |user|
       store:   store
     )
     ramen.photo.attach(io: File.open('app/assets/images/ra_men.jpg'), filename: 'ra_men.jpg')
-    user.save!
+    ramen.save!
   end
 }
