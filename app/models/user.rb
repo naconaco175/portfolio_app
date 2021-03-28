@@ -3,8 +3,9 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable,
          :confirmable, :timeoutable, :trackable, :omniauthable, omniauth_providers:[:twitter]
   has_one_attached :avatar
+  has_many :ramens, dependent: :destroy
 
-  validates :name,    length: { maximum: 10 },  presence: true
+  validates :name,    length: { maximum: 15 },  presence: true
   validates :profile, length: { maximum: 200 }
 
   def self.from_omniauth(auth)
