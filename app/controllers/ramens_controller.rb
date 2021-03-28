@@ -28,9 +28,9 @@ class RamensController < ApplicationController
     @ramen = Ramen.find(params[:id])
     if @ramen.update(ramen_params)
       flash[:success] = "投稿が更新されました"
-      redirect_to @ramen
+      redirect_to ramen_path(@ramen)
     else
-      render edit_ramen_path
+      render 'edit'
     end
   end
 
@@ -50,6 +50,6 @@ class RamensController < ApplicationController
     end
 
     def ramen_params
-      params.permit(:store, :comment, :product_name, :price, :photo)
+      params.require(:ramen).permit(:store, :comment, :product_name, :price, :photo)
     end
 end

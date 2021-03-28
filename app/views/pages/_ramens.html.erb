@@ -1,0 +1,23 @@
+<div class="col-sm-3 ramen-post">
+  <div class="ramen_image">
+    <%= image_tag ramen.photo.variant(gravity: "Center", resize:"300x250^",crop:"300x250+0+0").processed,alt: "ramen_image", class: "ramen_image d-block mx-auto"%>
+  </div>
+  <div class="ramen_info">
+    <h3 class="ramen_store"><%= ramen.store %></h3>
+    <div class="rigth-content">
+      <p class="ramen_name"><%= ramen.product_name %></p>
+      / <p class="ramen_price">¥ <%= ramen.price %></p>
+    </div>
+    <div class="ramen_comment">
+      <p><%= ramen.comment %></p>
+    </div>
+    <p class="ramen-time">投稿日: <%= ramen.created_at.strftime('%Y/%m/%d') %></p>
+    <% if ramen.user_id == current_user.id %>
+    <div class="row">
+      <div class="col col-2">
+        <%= link_to "編集", edit_ramen_path(ramen), class: "btn btn-danger btn-sm ramen_btn" %>
+      </div>
+    </div>
+    <% end %>
+  </div>
+</div>

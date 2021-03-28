@@ -69,3 +69,25 @@ ja:
       previous: "&lsaquo; 前"
       next: "次 &rsaquo;"
       truncate: "..."
+  ramens:
+    new:
+      store: "店名"
+      comment: "コメント"
+      photo: "写真"
+      product_name: "商品名"
+      price: "価格"
+
+  activerecord:
+    models:
+      user: ユーザー
+      ramen: ラーメン
+    attributes:
+      ramen:
+        store: "店名"
+        comment: "コメント"
+        photo: "写真"
+        product_name: "商品名"
+        price: "価格"
+  attributes:
+    created_at: 作成日
+    updated_at: 更新日
