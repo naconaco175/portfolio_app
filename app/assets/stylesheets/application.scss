@@ -353,6 +353,10 @@ footer {
   margin: 1rem auto;
 }
 
+.ramen_info_mini {
+  height: 55px;
+}
+
 .ramen_store {
   font-size: 2.5rem;
   border-bottom: solid 3px #d1b5b5;
@@ -384,6 +388,9 @@ footer {
   font-size: 1.2rem;
 }
 
+.comment_field {
+  height: 95px;
+}
 .ramen_comment {
   position: relative;
   display: inline-block;
@@ -395,6 +402,8 @@ footer {
   font-size: 1.5rem;
   background: #f8f4f4;
   border-radius: 8px;
+  overflow-wrap: break-word;
+  margin-top: 1px;
 }
 
 .ramen_comment:before {
@@ -419,6 +428,7 @@ footer {
 .ramen-time {
   text-align: right;
   color: #2e2b2b;
+  margin-top: -10px;
 }
 
 //最近の投稿//
@@ -427,14 +437,19 @@ footer {
   margin-left: 2px;
 }
 
-.ramen_info {
+.three_col {
   width: 300px;
 }
 
 .ramen_store {
-  font-size: 1rem;
+  font-size: 2rem;
 }
 
 .ramen_comment {
   font-size: 0.5rem;
+}
+
+.sm-btn {
+  font-size: 0.2rem;
+  padding: 1.5px 3px;
 }
