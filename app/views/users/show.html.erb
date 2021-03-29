@@ -21,3 +21,34 @@
       </div>
     </div>
   </div>
+  <div class="row tab-container">
+    <div class="container-fluid">
+      <div class="row justify-content-center no-gutters">
+        <div class="container tab_box">
+          <ul class="tab-list">
+            <li class="tab box-active">自分の投稿</li>
+            <li class="tab">いいね！した投稿</li>
+          </ul>
+          <div class="tabbox-contents">
+            <div class="container-fluid">
+              <div class="row row justify-content-center no-gutters">
+
+                <div class="tabbox box-show">
+                  <%= render partial: 'pages/ramens', collection: @ramens, as: :ramen %>
+                </div>
+                <div class="tabbox">
+                  <p>タブ2の中身が入ります。</p>
+                  <p>タブ2の中身が入ります。</p>
+                  <p>タブ2の中身が入ります。</p>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <%= paginate @ramens%>
+    </div>
+  </div>
+</div>
+<%= javascript_pack_tag 'users/show' %>

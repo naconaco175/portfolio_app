@@ -453,3 +453,54 @@ footer {
   font-size: 0.2rem;
   padding: 1.5px 3px;
 }
+
+//タブの切り替え//
+
+/* ↓外枠↓ */
+.container {
+  margin-top: 10px;
+  border: 1px solid #ccc;
+}
+
+.tab_box {
+  padding: 0.5em 1em;
+  margin: 2em 0;
+  background: white;
+  border-top: solid 5px #9e0221;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.22);
+}
+/* ↓タブを横並び↓ */
+.tab-list {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+/* ↓タブのデザイン↓ */
+.tab {
+  width: 100%;
+  padding: 10px;
+  cursor: pointer;
+  border-left: solid 1px #ccc;
+  border-bottom: solid 1px #ccc;
+}
+.tab:first-child {
+  border-left: none;
+}
+/* ↓タブがアクティブになっている時のデザイン↓ */
+.tab-active {
+  color: #fff;
+  background: #f26f6f;
+  transition: all 0.2s ease-in-out;
+}
+/* ↓タブの中身↓ */
+.tabbox {
+  /* ↓タブの中身を最初は非表示↓ */
+  display: none;
+  /* ↓タブの中身の余白↓ */
+  padding: 15px;
+}
+/* ↓このクラスがついている時だけタブの中身を表示↓ */
+.box-show {
+  display: block;
+}
