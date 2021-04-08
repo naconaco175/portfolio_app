@@ -4,6 +4,8 @@ class User < ApplicationRecord
          :confirmable, :timeoutable, :trackable, :omniauthable, omniauth_providers:[:twitter]
   has_one_attached :avatar
   has_many :ramens, dependent: :destroy
+  has_many :likes,  dependent: :destroy
+  has_many :like_ramens, through: :likes, source: :ramen
 
   validates :name,    length: { maximum: 15 },  presence: true
   validates :profile, length: { maximum: 200 }

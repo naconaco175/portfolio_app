@@ -32,16 +32,12 @@
           <div class="tabbox-contents">
             <div class="container-fluid">
               <div class="row row justify-content-center no-gutters">
-
                 <div class="tabbox box-show">
                   <%= render partial: 'pages/ramens', collection: @ramens, as: :ramen %>
                 </div>
                 <div class="tabbox">
-                  <p>タブ2の中身が入ります。</p>
-                  <p>タブ2の中身が入ります。</p>
-                  <p>タブ2の中身が入ります。</p>
+                  <%= render partial: 'pages/ramens', collection: @liked_ramens, as: :ramen %>
                 </div>
-
               </div>
             </div>
           </div>

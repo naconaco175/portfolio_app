@@ -26,7 +26,13 @@
         <%= link_to "編集", edit_ramen_path(ramen), class: "btn btn-danger btn-sm ramen_btn sm-btn" %>
       </div>
       <% end %>
+      <div class="col col-1">
+        <div id="like-<%= ramen.id %>">
+          <%= render partial: "pages/like", locals: { ramen: ramen } %>
+        </div>
+      </div>
     </div>
+
     <p class="ramen-time">投稿日: <%= ramen.created_at.strftime('%Y/%m/%d') %></p>
   </div>
 </div>

@@ -504,3 +504,24 @@ footer {
 .box-show {
   display: block;
 }
+
+//いいねボタン//
+
+.like-btn {
+  color: #f26f6f;
+}
+
+.unlike-btn {
+  color: #2e2b2b;
+}
+
+.fa-heart {
+  margin-left: 2px;
+  margin-right: 4px;
+}
+
+.like-count {
+  font-size: 0.8rem;
+  margin-left: 2px;
+  font-weight: 100;
+}

@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   root 'pages#index'
   post '/', to:'pages#index'
   get  'pages/show'
+  post '/ramens/:ramen_id/likes' => "likes#create"
+  delete '/ramens/:ramen_id/likes' => "likes#destroy"
 
   resources :users,      only: [:show, :index]
   resources :ramens, only: [:show, :new, :create, :edit, :update, :destroy]
