@@ -4,12 +4,14 @@
 自分の食べたラーメンのお店の情報や感想をみんなに写真付きで共有できます。<br >
 そして、いろんな人のラーメン情報を見て、自分の好みのラーメンと出会うことができます。<br >
 レスポンシブ対応しているのでスマホからもご確認いただけます。<br >
-<img width="1400" alt="スクリーンショット 2020-05-07 0 06 18" src="https://user-images.githubusercontent.com/60876388/81193748-c51d9b00-8ff6-11ea-9981-46789f016300.png">
-<img width="350" height="700" src= "https://user-images.githubusercontent.com/60876388/81476543-643bd000-924d-11ea-9d26-cac305ca9f91.jpeg">
+
+<!-- <img width="1400" alt="スクリーンショット 2020-05-07 0 06 18" src="https://user-images.githubusercontent.com/60876388/81193748-c51d9b00-8ff6-11ea-9981-46789f016300.png">
+<img width="350" height="700" src= "https://user-images.githubusercontent.com/60876388/81476543-643bd000-924d-11ea-9d26-cac305ca9f91.jpeg"> -->
 
 # URL
 
-http://the-view.work/ <br >
+<!-- http://the-view.work/ <br > -->
+<br>
 トップページ中央にあるゲストログインボタンから、メールアドレスとパスワードを入力せずにログインできます。
 Twitter でのログインも可能です。
 
@@ -44,7 +46,7 @@ Twitter でのログインも可能です。
 
 # AWS 構成図
 
-<img width="995" alt="スクリーンショット 2020-05-07 11 14 01" src="https://user-images.githubusercontent.com/60876388/81247155-3ccde300-9054-11ea-91eb-d06eb38a63b3.png">
+<!-- <img width="995" alt="スクリーンショット 2020-05-07 11 14 01" src="https://user-images.githubusercontent.com/60876388/81247155-3ccde300-9054-11ea-91eb-d06eb38a63b3.png"> -->
 
 # テスト
 
