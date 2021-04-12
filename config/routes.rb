@@ -4,7 +4,7 @@ Rails.application.routes.draw do
               sessions: "users/sessions",
          registrations: "users/registrations"
    }
-  root 'pages#index'
+  root      to:"pages#index"
   post '/', to:'pages#index'
   get  'pages/show'
   post '/ramens/:ramen_id/likes' => "likes#create"
