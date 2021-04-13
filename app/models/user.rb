@@ -2,10 +2,10 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable,
          :confirmable, :timeoutable, :trackable, :omniauthable, omniauth_providers:[:twitter]
-  has_one_attached :avatar
+  has_one_attached :avatar, dependent: :destroy
   has_many :ramens, dependent: :destroy
   has_many :likes,  dependent: :destroy
-  has_many :like_ramens, through: :likes, source: :ramen
+  has_many :like_ramens, through: :likes, source: :ramen,  dependent: :destroy
 
   validates :name,    length: { maximum: 15 },  presence: true
   validates :profile, length: { maximum: 200 }

@@ -28,7 +28,7 @@ users = User.all.order(:created_at)
 comment = Faker::Lorem.sentence(word_count: 5)
 store = Faker::Lorem.sentence(word_count: 3)
 users.each { |user|
-  35.times do
+  5.times do
     ramen = Ramen.create(
       user_id: user.id,
       comment: comment,

@@ -10,6 +10,12 @@ services:
       - "3306:3306"
     volumes:
       - ./db/mysql/volumes:/var/lib/mysql
+    environment:
+    - "SELENIUM_DRIVER_URL=http://selenium_chrome:4444/wd/hub"
+  selenium_chrome:
+    image: selenium/standalone-chrome-debug
+    logging:
+      driver: none
 
   web:
     build: .

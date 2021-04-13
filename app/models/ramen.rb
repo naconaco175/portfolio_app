@@ -1,8 +1,8 @@
 class Ramen < ApplicationRecord
   belongs_to       :user
   has_many         :likes, dependent: :destroy
-  has_many         :like_users, through: :likes, source: :user
-  has_one_attached :photo
+  has_many         :like_users, through: :likes, source: :user, dependent: :destroy
+  has_one_attached :photo, dependent: :destroy
 
   default_scope -> { order(created_at: :desc) }
 
