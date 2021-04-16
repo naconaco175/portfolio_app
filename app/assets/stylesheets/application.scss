@@ -27,7 +27,7 @@ body {
 }
 
 .navbar-brand {
-  background-image: url("images/logo-2.jpg");
+  background-image: image-url("images/logo-2.jpg");
   background-size: contain;
   height: 38px;
   width: 72px;
@@ -81,7 +81,7 @@ body {
 }
 
 .jumbotron {
-  background: url("images/top.jpg") center no-repeat;
+  background: image-url("images/top.jpg") center no-repeat;
   background-size: cover;
   height: 600px;
   border-radius: 0rem;
