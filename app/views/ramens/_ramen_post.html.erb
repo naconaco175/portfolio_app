@@ -12,6 +12,38 @@
       <div class="ramen_comment">
         <p><%= ramen.comment %></p>
       </div>
+      <div class="ramen-details">
+        　<span class="detail-title">詳細情報</span>
+        <ul>
+          <p class="ramen-detail">スープ：
+          <div class="ramen-detail-info"><%= ramen.taste %></div>
+          </p>
+          <p class="ramen-detail">ボリューム：
+          <div class="ramen-detail-info"><%= ramen.volume %></div>
+          </p>
+          <p class="ramen-detail">麺の太さ：
+          <div class="ramen-detail-info"><%= ramen.noodle %></div>
+          </p>
+          <p class="ramen-detail">油の量：
+          <div class="ramen-detail-info"><%= ramen.oily %></div>
+          </p>
+          <p class="ramen-detail">チャーシュー：
+          <div class="ramen-detail-info"><%= ramen.meat %></div>
+          </p>
+          <p class="ramen-detail">トッピングの量：
+          <div class="ramen-detail-info"><%= ramen.topping %></div>
+          </p>
+          <p class="ramen-detail">中毒性：
+          <div class="ramen-detail-info"><%= ramen.addictive %></div>
+          </p>
+          <p class="ramen-detail">混雑度：
+          <div class="ramen-detail-info"><%= ramen.croweded %></div>
+          </p>
+          <p class="ramen-detail">サービス：
+          <div class="ramen-detail-info"><%= ramen.service %></div>
+          </p>
+        </ul>
+      </div>
       <p class="ramen-time">投稿日: <%= ramen.created_at.strftime('%Y/%m/%d') %></p>
       <% if ramen.user_id == current_user.id %>
       <div class="row">

@@ -1,39 +1,12 @@
 <% provide(:title, "新規投稿")%>
 <div class="row white-container">
-  <div class="col offset-4 col-4">
+  <div class="col mx-auto">
     <h2 class="title black-text-title">新規投稿</h2>
-    <%= form_for(@ramen, url: ramens_path) do |f| %>
-    <%= render 'ramen_error_messages'%>
-    <div class="col align-self-center form-size field">
-      <div class="form-group field">
-        <%= f.label :店名（※必須） %><br />
-        <%= f.text_field :store, autofocus: true, autocomplete: "email", class: "form-control", placeholder: "店名を入力してください(20文字以内)" %>
-      </div>
-
-      <div class="form-group field">
-        <%= f.label :商品名 %>
-        <%= f.text_field :product_name, autofocus: true, autocomplete: "new-password", class: "form-control", placeholder: "商品名を入力してください(20文字以内)" %>
-      </div>
-
-      <div class="form-group field">
-        <%= f.label :価格（※必須） %><br />
-        <%= f.text_field :price, autofocus: true, autocomplete: "new-password", class: "form-control", placeholder: "価格を分かる範囲で数字で記入してください" %>
-      </div>
-
-      <div class="form-group field">
-        <%= f.label :ラーメン画像（※必須） %><br />
-        <%= f.file_field :photo, autofocus: true, class: "form-control file-field" %>
-      </div>
-
-      <div class="form-group field">
-        <%= f.label :コメント（※必須） %><br />
-        <%= f.text_area :comment, autofocus: true, class: "form-control text-field", rows: 5, placeholder: "ラーメンの味や感想、店内の雰囲気などを自由に記入しよう。(200文字以内)" %>
-      </div>
-
-      <div class="btn-center" type="submit">
-        <%= f.submit "投稿", class: "btn btn-primary submit-btn" %>
-      </div>
+    <div class="mx-auto" style="width: 600px;">
+      <%= form_for(@ramen, url: ramens_path) do |f| %>
+      <%= render 'ramen_error_messages'%>
+      <%= render 'ramen_column', f: f %>
+      <% end %>
     </div>
-    <% end %>
   </div>
 </div>

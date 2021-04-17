@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_13_145452) do
+ActiveRecord::Schema.define(version: 2021_04_17_093433) do
 
   create_table "active_storage_attachments", charset: "utf8mb4", force: :cascade do |t|
     t.string "name", null: false
@@ -56,6 +56,18 @@ ActiveRecord::Schema.define(version: 2021_04_13_145452) do
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "genre"
+    t.string "soup"
+    t.integer "evaluation"
+    t.string "taste"
+    t.string "volume"
+    t.string "noodle"
+    t.string "oily"
+    t.string "meat"
+    t.string "topping"
+    t.string "addictive"
+    t.string "service"
+    t.string "croweded"
     t.index ["user_id", "store"], name: "index_ramen_on_user_id_and_store"
     t.index ["user_id"], name: "index_ramen_on_user_id"
   end

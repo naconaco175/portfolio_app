@@ -50,6 +50,7 @@ class RamensController < ApplicationController
     end
 
     def ramen_params
-      params.require(:ramen).permit(:store, :comment, :product_name, :price, :photo)
+      params.require(:ramen)
+            .permit(:store, :comment, :product_name, :price, :photo, :genre, :soup, :evaluation, :taste, :volume, :noodle, :oily, :meat, :topping, :addictive, :service, :croweded)
     end
 end
