@@ -23,5 +23,6 @@ module Myapp
             controller_specs: false,
             routing_specs: false
     end
+    config.action_mailer.default_url_options = { host: "fazy.work" }
   end
 end
