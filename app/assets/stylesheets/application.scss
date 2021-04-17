@@ -196,7 +196,7 @@ body {
 }
 
 form {
-  width: 400px;
+  width: 600px;
 }
 
 .form-size {
@@ -220,6 +220,39 @@ form {
 .file-field {
   outline-style: none;
   padding-bottom: 2.5rem;
+}
+
+.form-check-label {
+  margin-left: 1.2rem;
+}
+
+.detail-label {
+  display: block;
+  font-size: 1.8rem;
+  font-weight: 300;
+  color: #9e0221;
+  text-align: center;
+  border: double 3px #9e0221;
+  width: 120px;
+}
+
+.form-label {
+  color: #232323;
+  width: 110px;
+  padding-top: 0.5rem;
+  margin-bottom: 1rem;
+  background-color: #f8f4f4;
+  text-align: center;
+}
+
+.form-group {
+  margin-top: 3rem;
+}
+
+.detail-info {
+  box-shadow: 0 3px 5px rgba(230, 204, 204, 0.363);
+  border: solid 1px #9e0221;
+  padding: 2rem;
 }
 
 .submit-btn {
@@ -277,7 +310,6 @@ footer {
   color: #fff;
   text-align: center;
   padding: 20px 0;
-  position: absolute;
   bottom: 0px;
 }
 
