@@ -463,6 +463,39 @@ footer {
   margin-top: -10px;
 }
 
+.ramen-details {
+  position: relative;
+  margin: 2em 0;
+  padding: 25px 10px 7px;
+  border: solid 2px #9e0221;
+}
+.ramen-detail {
+  font-size: 1.3rem;
+  display: inline-table;
+  width: 110px;
+  text-align: end;
+}
+
+.ramen-detail-info {
+  font-size: 1.3rem;
+  margin-left: 2rem;
+  display: inline;
+}
+
+.detail-title {
+  position: absolute;
+  display: inline-block;
+  top: -2px;
+  left: -2px;
+  padding: 0 9px;
+  height: 25px;
+  line-height: 25px;
+  font-size: 1.2rem;
+  letter-spacing: 0.5rem;
+  background: #9e0221;
+  color: #ffffff;
+}
+
 //最近の投稿//
 
 .ramen-post {
