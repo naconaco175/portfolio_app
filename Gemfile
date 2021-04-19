@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.5.8'
+ruby '2.5.9'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'rails', '~> 6.1.3'
@@ -33,15 +33,14 @@ gem 'omniauth', '1.9.1'
 gem 'omniauth-twitter'
 gem 'rails-i18n'
 gem 'devise-i18n'
-gem 'rails-i18n'
-gem 'devise-i18n'
 gem 'devise-i18n-views'
 gem 'faker'
 gem 'gimei'
-gem 'mini_magick', '~> 4.8'
+gem "mimemagic", "~> 0.3.10"
 gem 'kaminari'
 gem 'activestorage-validator'
 gem "unicorn"
+gem 'i18n', '~> 1.8', '>= 1.8.10'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

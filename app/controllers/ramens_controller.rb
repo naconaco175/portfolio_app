@@ -8,6 +8,7 @@ class RamensController < ApplicationController
 
   def new
     @ramen = Ramen.new
+    @list_soup = ["醤油", "味噌"]
   end
 
   def create
@@ -51,6 +52,6 @@ class RamensController < ApplicationController
 
     def ramen_params
       params.require(:ramen)
-            .permit(:store, :comment, :product_name, :price, :photo, :genre, :soup, :evaluation, :taste, :volume, :noodle, :oily, :meat, :topping, :addictive, :service, :croweded)
+            .permit(:store, :comment, :product_name, :price, :photo, :genre, :evaluation, :taste, :volume, :noodle, :oily, :meat, :topping, :addictive, :service, :croweded, soup: [])
     end
 end
