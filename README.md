@@ -54,3 +54,55 @@ Twitter でのログインも可能です。
   - 単体テスト(model)
   - 機能テスト(request)
   - 統合テスト(system))
+
+---
+
+# 麺道（MENDOU）
+
+This web application is service specializes in ra-men shop information<br >
+You can share the comments, photos and information about ra-men shops which you have visited, .<br >
+Furthermore,、you would find the best ra-men shop for you in a lot of information which other users shared.
+You can use this application with your smartphone, because the app is compatible with smartphone..<br >
+<img width="1400" alt="" src="">
+<img width="350" height="700" src= "">
+
+# URL
+
+http://<br >
+you can login the app not only without your mail add ｒ ess 　 and password, if you click the guest login button on the page of center, but also with your twitter account.
+
+# Technology used
+
+- Ruby
+- Ruby on Rails
+- MySQL
+- HTML/CSS
+- Bootstrap4
+- Nginx
+- Unicorn
+- AWS
+  - VPC
+  - EC2
+  - RDS
+  - Route53
+- Docker/Docker-compose
+- Rubocop
+- RSpec
+- Git
+
+# Function List
+
+- Regisration & Login function(devise)
+- Twitter Certification function（omniauth-twitter）
+- Post function
+  - photo posts(ActivStorage)
+- Good button function(Ajax)
+  - lanking function
+- pagenation function（kaminari）
+
+# AWS configuration
+
+- RSpec
+  - Single test(model)
+  - Function test(request)
+  - Integration test(system))
