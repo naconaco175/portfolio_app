@@ -4,12 +4,13 @@ Rails.application.routes.draw do
               sessions: "users/sessions",
          registrations: "users/registrations"
    }
-  root      to:"pages#index"
-  post '/', to:'pages#index'
-  get  'pages/show'
-  post '/ramens/:ramen_id/likes' => "likes#create"
-  delete '/ramens/:ramen_id/likes' => "likes#destroy"
+  root                              to:"pages#index"
+  post   '/',                       to:'pages#index'
+  get    'pages/show'
+  get    '/ramens/search',          to: "ramens#search"
+  post   '/ramens/:ramen_id/likes', to: "likes#create"
+  delete '/ramens/:ramen_id/likes', to: "likes#destroy"
 
-  resources :users,      only: [:show, :index]
+  resources :users,  only: [:show, :index]
   resources :ramens, only: [:show, :new, :create, :edit, :update, :destroy]
 end

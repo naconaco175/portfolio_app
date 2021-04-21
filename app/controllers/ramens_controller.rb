@@ -8,7 +8,7 @@ class RamensController < ApplicationController
 
   def new
     @ramen = Ramen.new
-    @list_soup = ["醤油", "味噌"]
+    # @list_soup = ["醤油", "味噌"]
   end
 
   def create
@@ -39,6 +39,15 @@ class RamensController < ApplicationController
     Ramen.find(params[:id]).destroy
     flash[:success] = "投稿が削除されました"
     redirect_to root_url
+  end
+
+  def search
+    if params[:store].present? or params[:product_name].present?
+      @ramens = Ramen.where('store LIKE ?', "%#{params[:store]}%")
+                     .where('product_name LIKE ?', "%#{params[:product_name]}%")
+    else
+      @ramens = Ramen.none
+    end
   end
 
   private
