@@ -4,14 +4,15 @@ services:
   db:
     image: mysql:5.7.32
     environment:
-      MYSQL_USER: root
+      MYSQL_USER: hinako
       MYSQL_ROOT_PASSWORD: password
+      MYSQL_PASSWORD: password
+      MYSQL_DATABASE: dbname
+      SELENIUM_DRIVER_URL: "http://selenium_chrome:4444/wd/hub"
     ports:
-      - "3306:3306"
+      - "3333:3306"
     volumes:
       - ./db/mysql/volumes:/var/lib/mysql
-    environment:
-    - "SELENIUM_DRIVER_URL=http://selenium_chrome:4444/wd/hub"
   selenium_chrome:
     image: selenium/standalone-chrome-debug
     logging:

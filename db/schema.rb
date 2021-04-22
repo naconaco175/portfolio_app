@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_17_093433) do
+ActiveRecord::Schema.define(version: 2021_04_21_225756) do
 
   create_table "active_storage_attachments", charset: "utf8mb4", force: :cascade do |t|
     t.string "name", null: false
@@ -68,6 +68,7 @@ ActiveRecord::Schema.define(version: 2021_04_17_093433) do
     t.string "addictive"
     t.string "service"
     t.string "croweded"
+    t.index ["store", "product_name"], name: "index_ramen_on_store_and_product_name"
     t.index ["user_id", "store"], name: "index_ramen_on_user_id_and_store"
     t.index ["user_id"], name: "index_ramen_on_user_id"
   end
