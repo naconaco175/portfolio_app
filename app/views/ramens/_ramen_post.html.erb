@@ -15,7 +15,16 @@
       <div class="ramen-details">
         　<span class="detail-title">詳細情報</span>
         <ul>
+          <p class="ramen-detail">総合評価：
+          <div class="ramen-detail-info"><%= ramen.evaluation %>点</div>
+          </p>
+          <p class="ramen-detail">ジャンル：
+          <div class="ramen-detail-info"><%= ramen.genre %></div>
+          </p>
           <p class="ramen-detail">スープ：
+          <div class="ramen-detail-info"><%= ramen.soup %></div>
+          </p>
+          <p class="ramen-detail">味：
           <div class="ramen-detail-info"><%= ramen.taste %></div>
           </p>
           <p class="ramen-detail">ボリューム：

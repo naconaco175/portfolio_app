@@ -1,5 +1,5 @@
 current directory: /myapp/vender/bundle/ruby/2.5.0/gems/jaro_winkler-1.5.4/ext/jaro_winkler
-/usr/local/bin/ruby -I /usr/local/lib/ruby/site_ruby/2.5.0 -r ./siteconf20210424-1-1ryrdep.rb extconf.rb
+/usr/local/bin/ruby -I /usr/local/lib/ruby/site_ruby/2.5.0 -r ./siteconf20210424-128-1gm3x81.rb extconf.rb
 creating Makefile
 
 current directory: /myapp/vender/bundle/ruby/2.5.0/gems/jaro_winkler-1.5.4/ext/jaro_winkler
@@ -80,4 +80,4 @@ linking shared-object jaro_winkler/jaro_winkler_ext.so
 
 current directory: /myapp/vender/bundle/ruby/2.5.0/gems/jaro_winkler-1.5.4/ext/jaro_winkler
 make "DESTDIR=" install
-/usr/bin/install -c -m 0755 jaro_winkler_ext.so ./.gem.20210424-1-l3ol0q/jaro_winkler
+/usr/bin/install -c -m 0755 jaro_winkler_ext.so ./.gem.20210424-128-1njuqkw/jaro_winkler

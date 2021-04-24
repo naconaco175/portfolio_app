@@ -105,7 +105,7 @@ checked program was:
 /* end */
 
 "gcc -o conftest -I/usr/local/include/ruby-2.5.0/x86_64-linux -I/usr/local/include/ruby-2.5.0/ruby/backward -I/usr/local/include/ruby-2.5.0 -I.    -D_GNU_SOURCE -DPOSIX_C_SOURCE=1-D_POSIX_C_SOURCE=200112L -O3 -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wno-tautological-compare -Wno-parentheses-equality -Wno-constant-logical-operand -Wno-self-assign -Wunused-variable -Wimplicit-int -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration -Wdeprecated-declarations -Wmisleading-indentation -Wno-packed-bitfield-compat -Wsuggest-attribute=noreturn -Wsuggest-attribute=format -Wimplicit-fallthrough=0 -Wduplicated-cond -Wrestrict  -fPIC conftest.c  -L. -L/usr/local/lib -Wl,-rpath,/usr/local/lib -L. -fstack-protector -rdynamic -Wl,-export-dynamic    -lrt  -Wl,-rpath,/usr/local/lib -L/usr/local/lib -lruby -lnsl -lrt  -lpthread -lgmp -ldl -lcrypt -lm   -lc"
-/usr/bin/ld: /tmp/ccX70DPr.o: in function `t':
+/usr/bin/ld: /tmp/ccRsI0WT.o: in function `t':
 /myapp/vender/bundle/ruby/2.5.0/gems/kgio-2.11.3/ext/kgio/conftest.c:14: undefined reference to `t_open'
 collect2: error: ld returned 1 exit status
 checked program was:
@@ -798,7 +798,7 @@ checked program was:
 /* end */
 
 "gcc -o conftest -I/usr/local/include/ruby-2.5.0/x86_64-linux -I/usr/local/include/ruby-2.5.0/ruby/backward -I/usr/local/include/ruby-2.5.0 -I.    -D_GNU_SOURCE -DPOSIX_C_SOURCE=1-D_POSIX_C_SOURCE=200112L -O3 -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wno-tautological-compare -Wno-parentheses-equality -Wno-constant-logical-operand -Wno-self-assign -Wunused-variable -Wimplicit-int -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration -Wdeprecated-declarations -Wmisleading-indentation -Wno-packed-bitfield-compat -Wsuggest-attribute=noreturn -Wsuggest-attribute=format -Wimplicit-fallthrough=0 -Wduplicated-cond -Wrestrict  -fPIC conftest.c  -L. -L/usr/local/lib -Wl,-rpath,/usr/local/lib -L. -fstack-protector -rdynamic -Wl,-export-dynamic    -lrt  -Wl,-rpath,/usr/local/lib -L/usr/local/lib -lruby -lrt  -lpthread -lgmp -ldl -lcrypt -lm   -lc"
-/usr/bin/ld: /tmp/cc0mKAf4.o: in function `t':
+/usr/bin/ld: /tmp/ccuxJCCB.o: in function `t':
 /myapp/vender/bundle/ruby/2.5.0/gems/kgio-2.11.3/ext/kgio/conftest.c:14: undefined reference to `rb_thread_blocking_region'
 collect2: error: ld returned 1 exit status
 checked program was:
