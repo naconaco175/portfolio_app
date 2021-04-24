@@ -26,31 +26,24 @@
 
   <%= f.label :詳細情報 , class: "detail-label" %><br />
   <div class="detail-info">
+    <div class="form-group field">
+      <div class="form-label">
+        <%= f.label :総合評価 %><br />
+      </div>
+      <p>100点満点で評価をしてください。数字は直接入力できます。</p>
+      <%= f.number_field(:evaluation, in: 1..100, step: '1') %>
+    </div>
     <div class="form-group">
-      <label for="ramen_genre">ジャンル</label>
-      <select name="ジャンル" id="ramen_genre" class="custom-select">
-        <option>選択してください</option>
-        <option value="ラーメン">ラーメン</option>
-        <option value="油そば">油そば</option>
-        <option value="つけ麺">つけ麺</option>
-        <option value="タンメン">タンメン</option>
-        <option value="その他">その他</option>
-      </select>
-    </div>
-    <div class="form-group field">
       <div class="form-label">
-        <%= f.label :総合評価（0~100点） %><br />
+        <%= f.label :ジャンル %><br />
       </div>
-      <%= f.range_field(:evaluation, in: 1..100, step: '.1') %>
+      <%= f.select :genre, {'ラーメン': 'ラーメン', 'つけ麺': 'つけ麺', '油そば': '油そば', 'タンメン': 'タンメン', 'その他': 'その他'}, { include_blank: '選択してください'}, { class: 'form-control' } %>
     </div>
-    <div class="form-group field">
+    <div class="form-group">
       <div class="form-label">
-        <%= f.label :スープの種類 %><br />
+        <%= f.label :スープ %><br />
       </div>
-      <% ["醤油","塩","味噌"].each do |soup| %>
-        <%= f.check_box :soup, {multiple: true}, soup, nil %>
-        <%= soup %>
-      <% end %>
+      <%= f.select :soup, {'醤油': '醤油', '味噌': '味噌', '豚骨': '豚骨', '塩': '塩', '魚介系': '魚介系', '煮干し': '煮干し', '家系': '家系', '次郎系': '次郎系', '坦々': '坦々', '辛口': '辛口', '高級食材系': '高級食材系', 'その他': 'その他'}, { include_blank: '選択してください'}, { class: 'form-control' } %>
     </div>
     <div class="form-group field">
       <div class="form-label">

@@ -42,12 +42,9 @@ class RamensController < ApplicationController
   end
 
   def search
-    if params[:store].present? or params[:product_name].present?
-      @ramens = Ramen.where('store LIKE ?', "%#{params[:store]}%")
-                     .where('product_name LIKE ?', "%#{params[:product_name]}%")
-    else
-      @ramens = Ramen.none
-    end
+    @search_params = ramen_search_params
+    @ramens = Ramen.search(@search_params)
+    @soup = ['醤油': '醤油', '味噌': '味噌', '豚骨': '豚骨', '塩': '塩', '魚介系': '魚介系', '煮干し': '煮干し', '家系': '家系', '次郎系': '次郎系', '坦々': '坦々', '辛口': '辛口', '高級食材系': '高級食材系', 'その他': 'その他']
   end
 
   private
@@ -61,6 +58,10 @@ class RamensController < ApplicationController
 
     def ramen_params
       params.require(:ramen)
-            .permit(:store, :comment, :product_name, :price, :photo, :genre, :evaluation, :taste, :volume, :noodle, :oily, :meat, :topping, :addictive, :service, :croweded, soup: [])
+            .permit(:store, :comment, :product_name, :price, :photo, :genre, :evaluation, :taste, :volume, :noodle, :oily, :meat, :topping, :addictive, :service, :croweded, :soup)
+    end
+
+    def ramen_search_params
+      params.fetch(:search, {}).permit(:store, :comment, :product_name, :price, :photo, :genre, :evaluation, :taste, :volume, :noodle, :oily, :meat, :topping, :addictive, :service, :croweded, :soup)
     end
 end

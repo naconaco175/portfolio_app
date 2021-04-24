@@ -1,5 +1,5 @@
 current directory: /myapp/vender/bundle/ruby/2.5.0/gems/puma-5.2.2/ext/puma_http11
-/usr/local/bin/ruby -I /usr/local/lib/ruby/site_ruby/2.5.0 -r ./siteconf20210424-1-hq8h31.rb extconf.rb
+/usr/local/bin/ruby -I /usr/local/lib/ruby/site_ruby/2.5.0 -r ./siteconf20210424-128-1953xt1.rb extconf.rb
 checking for BIO_read() in -lcrypto... yes
 checking for SSL_CTX_new() in -lssl... yes
 checking for openssl/bio.h... yes
@@ -22,4 +22,4 @@ linking shared-object puma/puma_http11.so
 
 current directory: /myapp/vender/bundle/ruby/2.5.0/gems/puma-5.2.2/ext/puma_http11
 make "DESTDIR=" install
-/usr/bin/install -c -m 0755 puma_http11.so ./.gem.20210424-1-ambxux/puma
+/usr/bin/install -c -m 0755 puma_http11.so ./.gem.20210424-128-1utb288/puma

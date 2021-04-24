@@ -1,5 +1,5 @@
 current directory: /myapp/vender/bundle/ruby/2.5.0/gems/ffi-1.15.0/ext/ffi_c
-/usr/local/bin/ruby -I /usr/local/lib/ruby/site_ruby/2.5.0 -r ./siteconf20210424-1-1ej7m1c.rb extconf.rb
+/usr/local/bin/ruby -I /usr/local/lib/ruby/site_ruby/2.5.0 -r ./siteconf20210424-128-o5dzlt.rb extconf.rb
 checking for ffi_prep_closure_loc() in -lffi... yes
 checking for ffi_prep_cif_var()... yes
 checking for ffi_raw_call()... yes
@@ -39,4 +39,4 @@ linking shared-object ffi_c.so
 
 current directory: /myapp/vender/bundle/ruby/2.5.0/gems/ffi-1.15.0/ext/ffi_c
 make "DESTDIR=" install
-/usr/bin/install -c -m 0755 ffi_c.so ./.gem.20210424-1-1qw0c8y
+/usr/bin/install -c -m 0755 ffi_c.so ./.gem.20210424-128-xi502c

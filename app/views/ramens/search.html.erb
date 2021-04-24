@@ -2,9 +2,249 @@
 <div class="row white-container">
   <div class="col offset-3 col-6">
     <h2 class="title black-text-title">ラーメン検索</h2>
-    <div class="search-box">
+    <div class="search-brock">
+      <%= form_with(scope: :search, url: ramens_search_path, method: :get, local: true) do |f| %>
+      <div class="field">
+        <%= f.label(:store,'店名') %>
+        <%= f.text_field :store, value: @search_params[:store] %>
+      </div>
+      <div class="field">
+        <%= f.label(:product_name, '商品名') %>
+        <%= f.text_field :product_name, value: @search_params[:product_name] %>
+      </div>
+      <div class="field">
+        <%= f.label(:genre, 'ジャンル') %>
+        <%= f.select(:genre, {'ラーメン': 'ラーメン', 'つけ麺': 'つけ麺', '油そば': '油そば', 'タンメン': 'タンメン', 'その他': 'その他'}, selected: @search_params[:prefecture_id], include_blank: '選択') %>
+      </div>
+      <div class="form-group field">
+        <div class="form-label">
+          <%= f.label :味 %><br />
+        </div>
+        <div class="form-check form-check-inline">
+          <%= f.radio_button :taste, "とてもあっさり", class: "form-check-input",checked: @search_params[:taste]=="とてもあっさり" %>
+          <%= f.label :とてもあっさり, class: "form-check-label" %>
+        </div>
+        <div class="form-check form-check-inline">
+          <%= f.radio_button :taste, "あっさり", class: "form-check-input",checked: @search_params[:taste]=="あっさり" %>
+          <%= f.label :あっさり, class: "form-check-label" %>
+        </div>
+        <div class="form-check form-check-inline">
+          <%= f.radio_button :taste, "普通", class: "form-check-input",checked: @search_params[:taste]=="普通" %>
+          <%= f.label :普通, class: "form-check-label" %>
+        </div>
+        <div class="form-check form-check-inline">
+          <%= f.radio_button :taste, "濃いめ", class: "form-check-input",checked: @search_params[:taste]=="濃いめ" %>
+          <%= f.label :濃いめ, class: "form-check-label" %>
+        </div>
+        <div class="form-check form-check-inline">
+          <%= f.radio_button :taste, "特濃", class: "form-check-input",checked: @search_params[:taste]=="特濃" %>
+          <%= f.label :特濃, class: "form-check-label" %>
+        </div>
+        <div class="form-group field">
+          <div class="form-label">
+            <%= f.label :ボリューム %><br />
+          </div>
+          <div class="form-check form-check-inline">
+            <%= f.radio_button :volume, "小盛り",checked: @search_params[:volume]=="小盛り", class: "form-check-input" %>
+            <%= f.label :小盛り, class: "form-check-label" %>
+          </div>
+          <div class="form-check form-check-inline">
+            <%= f.radio_button :volume, "普通",checked: @search_params[:volume]=="普通", class: "form-check-input" %>
+            <%= f.label :普通, class: "form-check-label" %>
+          </div>
+          <div class="form-check form-check-inline">
+            <%= f.radio_button :volume, "大盛り",checked: @search_params[:volume]=="大盛り", class: "form-check-input" %>
+            <%= f.label :大盛り, class: "form-check-label" %>
+          </div>
+          <div class="form-check form-check-inline">
+            <%= f.radio_button :volume, "特盛",checked: @search_params[:volume]=="特盛", class: "form-check-input" %>
+            <%= f.label :特盛, class: "form-check-label" %>
+          </div>
+        </div>
 
+        <div class="form-group field">
+          <div class="form-label">
+            <%= f.label :麺の太さ %><br />
+          </div>
+          <div class="form-check form-check-inline">
+            <%= f.radio_button :noodle, "細麺",checked: @search_params[:noodle]=="細麺", class: "form-check-input" %>
+            <%= f.label :細麺, class: "form-check-label" %>
+          </div>
+          <div class="form-check form-check-inline">
+            <%= f.radio_button :noodle, "中太",checked: @search_params[:noodle]=="中太", class: "form-check-input" %>
+            <%= f.label :中太, class: "form-check-label" %>
+          </div>
+          <div class="form-check form-check-inline">
+            <%= f.radio_button :noodle, "太麺",checked: @search_params[:noodle]=="太麺", class: "form-check-input" %>
+            <%= f.label :太麺, class: "form-check-label" %>
+          </div>
+          <div class="form-check form-check-inline">
+            <%= f.radio_button :noodle, "平打ち麺",checked: @search_params[:noodle]=="平打ち麺", class: "form-check-input" %>
+            <%= f.label :平打ち麺, class: "form-check-label" %>
+          </div>
+          <div class="form-check form-check-inline">
+            <%= f.radio_button :noodle, "ちぢれ麺",checked: @search_params[:noodle]=="ちぢれ麺", class: "form-check-input" %>
+            <%= f.label :ちぢれ麺, class: "form-check-label" %>
+          </div>
+        </div>
+
+        <div class="form-group field">
+          <div class="form-label">
+            <%= f.label :油の量 %><br />
+          </div>
+          <div class="form-check form-check-inline">
+            <%= f.radio_button :oily, "少なめ",checked: @search_params[:oily]=="少なめ", class: "form-check-input" %>
+            <%= f.label :少なめ, class: "form-check-label" %>
+          </div>
+          <div class="form-check form-check-inline">
+            <%= f.radio_button :oily, "普通",checked: @search_params[:oily]=="普通", class: "form-check-input" %>
+            <%= f.label :普通, class: "form-check-label" %>
+          </div>
+          <div class="form-check form-check-inline">
+            <%= f.radio_button :oily, "多め",checked: @search_params[:oily]=="多め", class: "form-check-input" %>
+            <%= f.label :多め, class: "form-check-label" %>
+          </div>
+          <div class="form-check form-check-inline">
+            <%= f.radio_button :oily, "ギトギト",checked: @search_params[:oily]=="ギトギト", class: "form-check-input" %>
+            <%= f.label :ギトギト, class: "form-check-label" %>
+          </div>
+        </div>
+
+        <div class="form-group field">
+          <div class="form-label">
+            <%= f.label :チャーシュー %><br />
+          </div>
+          <div class="form-check form-check-inline">
+            <%= f.radio_button :meat, "なし",checked: @search_params[:meat]=="なし", class: "form-check-input" %>
+            <%= f.label :なし, class: "form-check-label" %>
+          </div>
+          <div class="form-check form-check-inline">
+            <%= f.radio_button :meat, "薄切り",checked: @search_params[:meat]=="薄切り", class: "form-check-input" %>
+            <%= f.label :薄切り, class: "form-check-label" %>
+          </div>
+          <div class="form-check form-check-inline">
+            <%= f.radio_button :meat, "普通",checked: @search_params[:meat]=="普通", class: "form-check-input" %>
+            <%= f.label :普通, class: "form-check-label" %>
+          </div>
+          <div class="form-check form-check-inline">
+            <%= f.radio_button :meat, "厚切り",checked: @search_params[:meat]=="厚切り", class: "form-check-input" %>
+            <%= f.label :厚切り, class: "form-check-label" %>
+          </div>
+          <div class="form-check form-check-inline">
+            <%= f.radio_button :meat, "極厚",checked: @search_params[:meat]=="極厚", class: "form-check-input" %>
+            <%= f.label :極厚, class: "form-check-label" %>
+          </div>
+        </div>
+
+        <div class="form-group field">
+          <div class="form-label">
+            <%= f.label :トッピングの量 %><br />
+          </div>
+          <div class="form-check form-check-inline">
+            <%= f.radio_button :topping, "なし",checked: @search_params[:topping]=="なし", class: "form-check-input" %>
+            <%= f.label :なし, class: "form-check-label" %>
+          </div>
+          <div class="form-check form-check-inline">
+            <%= f.radio_button :topping, "少なめ",checked: @search_params[:topping]=="少なめ", class: "form-check-input" %>
+            <%= f.label :少なめ, class: "form-check-label" %>
+          </div>
+          <div class="form-check form-check-inline">
+            <%= f.radio_button :topping, "普通",checked: @search_params[:topping]=="普通", class: "form-check-input" %>
+            <%= f.label :普通, class: "form-check-label" %>
+          </div>
+          <div class="form-check form-check-inline">
+            <%= f.radio_button :topping, "多め",checked: @search_params[:topping]=="多め", class: "form-check-input" %>
+            <%= f.label :多め, class: "form-check-label" %>
+          </div>
+          <div class="form-check form-check-inline">
+            <%= f.radio_button :topping, "特盛",checked: @search_params[:topping]=="特盛", class: "form-check-input" %>
+            <%= f.label :特盛, class: "form-check-label" %>
+          </div>
+        </div>
+
+        <div class="form-group field">
+          <div class="form-label">
+            <%= f.label :中毒性 %><br />
+          </div>
+          <div class="form-check form-check-inline">
+            <%= f.radio_button :addictive, "なし",checked: @search_params[:addictive]=="なし", class: "form-check-input" %>
+            <%= f.label :なし, class: "form-check-label" %>
+          </div>
+          <div class="form-check form-check-inline">
+            <%= f.radio_button :addictive, "ややあり",checked: @search_params[:addictive]=="ややあり", class: "form-check-input" %>
+            <%= f.label :ややあり, class: "form-check-label" %>
+          </div>
+          <div class="form-check form-check-inline">
+            <%= f.radio_button :addictive, "あり",checked: @search_params[:addictive]=="あり", class: "form-check-input" %>
+            <%= f.label :あり, class: "form-check-label" %>
+          </div>
+          <div class="form-check form-check-inline">
+            <%= f.radio_button :addictive, "猛毒",checked: @search_params[:addictive]=="猛毒", class: "form-check-input" %>
+            <%= f.label :猛毒, class: "form-check-label" %>
+          </div>
+        </div>
+
+        <div class="form-group field">
+          <div class="form-label">
+            <%= f.label :混雑度 %><br />
+          </div>
+          <div class="form-check form-check-inline">
+            <%= f.radio_button :croweded, "空いている",checked: @search_params[:croweded]=="空いている", class: "form-check-input" %>
+            <%= f.label :空いている, class: "form-check-label" %>
+          </div>
+          <div class="form-check form-check-inline">
+            <%= f.radio_button :croweded, "やや空いている",checked: @search_params[:croweded]=="やや空いている", class: "form-check-input" %>
+            <%= f.label :やや空いている, class: "form-check-label" %>
+          </div>
+          <div class="form-check form-check-inline">
+            <%= f.radio_button :croweded, "普通",checked: @search_params[:croweded]=="普通", class: "form-check-input" %>
+            <%= f.label :普通, class: "form-check-label" %>
+          </div>
+          <div class="form-check form-check-inline">
+            <%= f.radio_button :croweded, "やや混雑",checked: @search_params[:croweded]=="やや混雑", class: "form-check-input" %>
+            <%= f.label :やや混雑, class: "form-check-label" %>
+          </div>
+          <div class="form-check form-check-inline">
+            <%= f.radio_button :croweded, "激混み",checked: @search_params[:croweded]=="激混み", class: "form-check-input" %>
+            <%= f.label :激混み, class: "form-check-label" %>
+          </div>
+        </div>
+
+        <div class="form-group field">
+          <div class="form-label">
+            <%= f.label :サービス %><br />
+          </div>
+          <div class="form-check form-check-inline">
+            <%= f.radio_button :service, "良くない",checked: @search_params[:service]=="良くない", class: "form-check-input" %>
+            <%= f.label :良くない, class: "form-check-label" %>
+          </div>
+          <div class="form-check form-check-inline">
+            <%= f.radio_button :service, "あまり良くない",checked: @search_params[:service]=="あまり良くない", class: "form-check-input" %>
+            <%= f.label :あまり良くない, class: "form-check-label" %>
+          </div>
+          <div class="form-check form-check-inline">
+            <%= f.radio_button :service, "普通",checked: @search_params[:service]=="普通", class: "form-check-input" %>
+            <%= f.label :普通, class: "form-check-label" %>
+          </div>
+          <div class="form-check form-check-inline">
+            <%= f.radio_button :service, "良い",checked: @search_params[:service]=="良い", class: "form-check-input" %>
+            <%= f.label :良い, class: "form-check-label" %>
+          </div>
+          <div class="form-check form-check-inline">
+            <%= f.radio_button :service, "とても良い",checked: @search_params[:service]=="とても良い", class: "form-check-input" %>
+            <%= f.label :とても良い, class: "form-check-label" %>
+          </div>
+        </div>
+      </div>
+      <div class="btn-center" type="submit">
+        <%= f.submit "検索", class: "btn btn-primary submit-btn" %>
+      </div>
+      <% end %>
     </div>
-    <%= render 'ramen_post', ramen: @ramens %>
+    <div class="container-fluid">
+      <div class="row justify-content-center no-gutters">
+        <%= render partial: 'pages/ramens', collection: @ramens, as: :ramen %>
+      </div>
+    </div>
   </div>
 </div>

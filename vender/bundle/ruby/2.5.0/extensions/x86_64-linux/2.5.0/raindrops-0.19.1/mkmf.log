@@ -2601,7 +2601,7 @@ In file included from /usr/include/x86_64-linux-gnu/bits/libc-header-start.h:33,
 cc1: warning: unrecognized command line option ‘-Wno-self-assign’
 cc1: warning: unrecognized command line option ‘-Wno-constant-logical-operand’
 cc1: warning: unrecognized command line option ‘-Wno-parentheses-equality’
-/usr/bin/ld: /tmp/cc1bZkRb.o: in function `t':
+/usr/bin/ld: /tmp/ccq9eMIQ.o: in function `t':
 /myapp/vender/bundle/ruby/2.5.0/gems/raindrops-0.19.1/ext/raindrops/conftest.c:14: undefined reference to `rb_thread_blocking_region'
 collect2: error: ld returned 1 exit status
 checked program was:
