@@ -1,4 +1,4 @@
-FROM ruby:2.5
+FROM ruby:2.5.8
 RUN apt-get update -qq && apt-get install -y build-essential libpq-dev \
     && apt-get install apt-transport-https \
     && curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - \
