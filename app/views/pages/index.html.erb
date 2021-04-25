@@ -38,7 +38,8 @@
 <div class="jumbotron text-center">
   <div class="col align-self-center">
     <h1 class="mendou-font">拉麺を愛するあなたへ<br>至極の一杯を追究しよう</h1>
-    <%= link_to "はじめる", new_user_session_path, class: "btn btn-flat-border" %>
+    <%= link_to "はじめる", new_user_session_path, class: "btn btn-flat-border" %><br />
+    <%= link_to "テストログイン", pages_guest_sign_in_path, method: :post, class: "btn btn-flat-border test-login" %>
   </div>
 </div>
 <div class="text-center red-container">
