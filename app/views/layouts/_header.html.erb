@@ -10,9 +10,9 @@
         <%= link_to "ABOUT", root_path, class: "nav-link text-danger" %>
         <% if user_signed_in? %>
         <%= link_to "MyPage", user_path(current_user), class: "nav-link text-danger" %>
-        <%= link_to "ユーザ-一覧", users_path, class: "nav-link text-danger" %>
-        <%= link_to "投稿一覧", root_path, class: "nav-link text-danger" %>
-        <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "btn btn-danger btn-sm nav-btn" %>
+        <%= link_to "ユーザー", users_path, class: "nav-link text-danger" %>
+        <%= link_to "検索", ramens_search_path, class: "btn btn-danger btn-sm nav-btn search-btn" %>
+        <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "btn btn-outline-danger btn-sm nav-btn" %>
         <% else %>
         <%= link_to "ログイン", new_user_session_path, class: "btn btn-outline-danger btn-sm nav-btn" %>
         <%= link_to "サインアップ", new_user_registration_path, class: "btn btn-danger btn-sm nav-btn" %>
