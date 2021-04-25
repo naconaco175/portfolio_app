@@ -210,6 +210,7 @@ form {
 
 .form-check-label {
   margin-left: 2rem;
+  width: 75px;
 }
 
 .btn-center {
@@ -545,7 +546,8 @@ input[type="checkbox"]:checked + label:before {
 //最近の投稿//
 
 .ramen-post {
-  margin-left: 2px;
+  margin: 5px;
+  width: 320px;
 }
 
 .three_col {
@@ -563,6 +565,10 @@ input[type="checkbox"]:checked + label:before {
 .sm-btn {
   font-size: 0.2rem;
   padding: 1.5px 3px;
+}
+
+.post-side-margin {
+  margin: 0 auto;
 }
 
 //タブの切り替え//
@@ -635,4 +641,30 @@ input[type="checkbox"]:checked + label:before {
   font-size: 0.8rem;
   margin-left: 2px;
   font-weight: 100;
+}
+
+//検索//
+
+.search-brock {
+  width: 700px;
+  margin: auto;
+  border: 2px dotted #9e0221;
+  border-radius: 5%;
+  padding: 2rem;
+}
+.search-field {
+  width: 700px;
+}
+.search-title {
+  color: #232323;
+  width: 85px;
+  margin: 0.5rem 1rem 0.5rem 0;
+  padding: 0.4rem 0;
+  background-color: #f8f4f4;
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+.btn-search {
+  margin-top: 10px;
 }
