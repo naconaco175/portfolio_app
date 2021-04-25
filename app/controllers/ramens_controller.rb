@@ -45,6 +45,7 @@ class RamensController < ApplicationController
     @search_params = ramen_search_params
     @ramens = Ramen.search(@search_params)
     @soup = ['醤油': '醤油', '味噌': '味噌', '豚骨': '豚骨', '塩': '塩', '魚介系': '魚介系', '煮干し': '煮干し', '家系': '家系', '次郎系': '次郎系', '坦々': '坦々', '辛口': '辛口', '高級食材系': '高級食材系', 'その他': 'その他']
+    @ramens = @ramens.page(params[:page])
   end
 
   private
