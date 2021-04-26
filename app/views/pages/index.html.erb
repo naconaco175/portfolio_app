@@ -21,31 +21,25 @@
         </div>
       </div>
     </div>
-    <%= paginate @ramens%>
+    <div class="paginate">
+      <%= paginate @ramens%>
+    </div>
   </div>
 </div>
 </div>
 <%= javascript_pack_tag 'users/show' %>
-
-<div class="row white-container">
-  <div class="col offset-3 col-6">
-    <h2 class="title black-text-title">最近の投稿</h2>
-  </div>
-
-  <%= render partial: 'ramens_post' %>
-</div>
 <% else %>
 <div class="jumbotron text-center">
   <div class="col align-self-center">
-    <h1 class="mendou-font">拉麺を愛するあなたへ<br>至極の一杯を追究しよう</h1>
+    <h3 class="mendou-font">あなたの人生最高の一杯をここでみつけよう</h3>
     <%= link_to "はじめる", new_user_session_path, class: "btn btn-flat-border" %><br />
     <%= link_to "テストログイン", pages_guest_sign_in_path, method: :post, class: "btn btn-flat-border test-login" %>
   </div>
 </div>
 <div class="text-center red-container">
-  <h2 class="title">ABOUT</h2>
+  <h2 class="title" , id="about">ABOUT</h2>
   <p class="title-msg">
-    拉麺のためになら、<br>どんなに遠くとも足を運び<br>新たなる境地へも果敢に挑戦する者達へ
+    このサービスでは、ラーメンを愛する者たちが集い<br>自分の食べたラーメンを共有することができます。<br>また、蓄積されたラーメンデータベースの中から<br>あなたが求める最高のラーメンを探し出すこともできます。
   </p>
 </div>
 <% end %>
