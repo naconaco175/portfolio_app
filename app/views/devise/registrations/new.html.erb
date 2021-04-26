@@ -1,10 +1,10 @@
 <% provide(:title, "サインアップ")%>
 <div class="row white-container">
-  <div class="col offset-4 col-4">
+  <div class="col align-self-center">
     <h2 class="title black-text-title">サインアップ</h2>
     <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
     <%= render "devise/shared/error_messages", resource: resource %>
-    <div class="col align-self-center form-size field">
+    <div class="login-forms">
       <div class="form-group field">
         <%= f.label :メールアドレス %><br />
         <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control" %>
@@ -34,12 +34,11 @@
         <%= f.label :プロフィール画像 %><br />
         <%= f.file_field :avatar, autofocus: true, class: "form-control file-field" %>
       </div>
-
+      <%= render "devise/shared/links" %>
       <div class="btn-center" type="submit">
         <%= f.submit "サインアップ", class: "btn btn-primary submit-btn" %>
       </div>
     </div>
     <% end %>
-    <%= render "devise/shared/links" %>
   </div>
 </div>
