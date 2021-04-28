@@ -95,6 +95,10 @@ main {
   margin-bottom: 0px;
 }
 
+.top-image-mini {
+  height: 400px;
+}
+
 @import url("https://fonts.googleapis.com/css2?family=Shippori+Mincho&display=swap");
 .mendou-font {
   font-family: "Shippori Mincho", serif;
@@ -103,6 +107,10 @@ main {
   margin-top: 180px;
   padding: 2rem;
   background-color: rgba(255, 255, 255, 0.438);
+}
+
+.mendou-font-mini {
+  margin-top: 100px;
 }
 
 .btn-flat-border {
@@ -222,7 +230,7 @@ form {
 
 .form-check-label {
   display: block;
-  padding-left: 1rem;
+  padding-left: 2rem;
   padding-top: 0.1rem;
   font-size: 1.2rem;
 }
@@ -443,7 +451,7 @@ footer {
 }
 
 .comment_field {
-  height: 95px;
+  height: 115px;
 }
 .ramen_comment {
   position: relative;

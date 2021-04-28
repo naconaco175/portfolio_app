@@ -1,9 +1,9 @@
 <% provide(:title, "ユーザーの更新")%>
 <div class="row white-container">
-  <div class="col offset-4 col-4">
+  <div class="col align-self-center">
     <h2 class="title black-text-title">ユーザーの更新・削除</h2>
     <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
-    <div class="col align-self-center form-size field">
+    <div class="login-forms">
       <%= render "devise/shared/error_messages", resource: resource %>
 
       <div class="form-group field">
