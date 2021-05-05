@@ -1,7 +1,7 @@
 <% provide(:title, "ユーザー一覧") %>
 <div class="row white-container">
-  <div class="col offset-3 col-6">
-    <h2 class="title black-text-title">ユーザー一覧</h2>
+  <div class="col align-self-center">
+    <h2 class=" title black-text-title">ユーザー一覧</h2>
     <%= render partial: 'users', collection: @users, as: :user %>
     <div class="paginate">
       <%= paginate @users%>
