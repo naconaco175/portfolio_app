@@ -48,7 +48,7 @@ header {
   width: 100%;
   height: 55px;
   z-index: 10;
-  background-color: white;
+  background-color: rgb(253, 249, 249);
 }
 
 #nav {
@@ -147,6 +147,10 @@ header {
   background-image: image-url("images/logo-2.jpg");
   background-size: contain;
   background-repeat: no-repeat;
+  @include media() {
+    width: 80px;
+    height: 40px;
+  }
 }
 
 .nav-btn {
@@ -154,6 +158,10 @@ header {
   margin-bottom: 5px;
   font-size: 1.3rem;
   width: 130px;
+}
+
+.nav-link {
+  font-size: 1.5rem;
 }
 
 //フラッシュ//
@@ -193,11 +201,15 @@ header {
   height: 600px;
   border-radius: 0rem;
   margin-bottom: 0px;
-  margin-top: 70px;
+  margin-top: 30px;
 }
 
 .top-image-mini {
   height: 400px;
+}
+
+.search-top-btn {
+  width: 180px;
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Shippori+Mincho&display=swap");
@@ -249,11 +261,15 @@ header {
 
 .title {
   color: #fff;
-  padding-top: 5rem;
+  padding-top: 6rem;
   margin-bottom: 5rem;
   position: relative;
   letter-spacing: 1rem;
   font-size: 2.7srem;
+  @include media() {
+    padding-top: 6rem;
+    font-size: 1.8rem;
+  }
 }
 
 .title::before {
@@ -323,7 +339,7 @@ header {
 }
 
 form {
-  width: 600px;
+  width: 630px;
   @include media() {
     width: 350px;
   }
@@ -352,6 +368,9 @@ form {
 .btn-center {
   text-align: center;
   margin-top: 4rem;
+  @include media() {
+    margin-top: 2rem;
+  }
 }
 
 .file-field {
@@ -404,7 +423,6 @@ form {
   letter-spacing: 0.5rem;
   font-size: 1.3rem;
   padding: 0.5rem 1rem;
-  margin-bottom: 100px;
 }
 
 //認証リンク//
@@ -431,7 +449,7 @@ form {
 }
 
 .back-link {
-  margin-bottom: 3rem;
+  margin-bottom: 5rem;
 }
 
 //エラーメッセージ//
@@ -464,24 +482,45 @@ footer {
 
 .user_info {
   padding: 0.5em 1em;
-  margin: 2em 0;
+  margin: 2em auto;
   color: #9e0221;
   background: white;
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.22);
   height: 200px;
+  width: 500px;
+  @include media() {
+    width: 350px;
+  }
+}
+
+.user-right-info {
+  width: 300px;
+  margin-left: 50px;
+  @include media() {
+    width: 250px;
+    margin-left: 23px;
+  }
 }
 
 .user_image {
   border-radius: 50%;
   border: 2px #9e0221 solid;
   margin-top: 3rem;
-  margin-left: 1rem;
+  margin-left: 2rem;
+  @include media {
+    margin-top: 1rem;
+    margin-left: 2rem;
+  }
 }
 
 .user_default_image {
   height: 90px;
   width: 90px;
   opacity: 0.7;
+  @include media() {
+    height: 60px;
+    width: 60px;
+  }
 }
 
 .user_name {
@@ -530,8 +569,16 @@ footer {
   justify-content: center;
   margin: 1rem auto;
   margin-bottom: 6rem;
+  @include media() {
+    width: 350px;
+  }
 }
 
+.ramen_image {
+  @include media() {
+    width: 350px;
+  }
+}
 .ramen_info_mini {
   height: 55px;
 }
@@ -616,11 +663,22 @@ footer {
   padding: 25px 10px 7px;
   border: solid 2px #9e0221;
 }
+
+.form-show-label {
+  width: 120px;
+  justify-content: center;
+  display: inline-block;
+}
+
+.ramen-details ul {
+  margin-left: 0;
+  justify-content: start;
+}
 .ramen-detail {
   font-size: 1.3rem;
-  display: inline-table;
-  width: 110px;
-  text-align: end;
+  // display: inline-table;
+  // width: 110px;
+  // text-align: end;
 }
 
 .ramen-detail-info {
@@ -789,8 +847,14 @@ footer {
 
 .form-new-check {
   width: 108px;
+  @include media() {
+    width: 120px;
+  }
 }
 
 .new-field {
   width: 650px;
+  @include media() {
+    width: 338px;
+  }
 }

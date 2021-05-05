@@ -3,19 +3,19 @@
   <div class="col align-self-center">
     <h2 class="title black-text-title">My Page</h2>
     <div class="row user_info">
-      <div class="col-3">
+      <div class="row">
         <% if @user.avatar.attached? %>
         <%= image_tag @user.avatar.variant(gravity: "Center", resize:"90x90^",crop:"90x90+0+0").processed,alt: "user_image", class: "user_image"%>
         <% else %>
         <%= image_tag 'user_default.png', alt: "user_image", class: "user_default_image user_image"%>
         <% end %>
       </div>
-      <div class="col-9">
+      <div class="user-right-info">
         <h4 class="user_name"><%= @user.name %></h4>
         <p class="user_profile"><%= @user.profile %></p>
         <div class="row">
           <div class="col col-2">
-            <%= link_to "更新", edit_user_registration_path(current_user), class: "btn btn-danger btn-sm user_btn" %>
+            <%= link_to "更新",edit_user_registration_path(current_user), class: "btn btn-danger btn-sm user_btn" %>
           </div>
         </div>
       </div>
