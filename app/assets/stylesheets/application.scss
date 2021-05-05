@@ -349,14 +349,13 @@ footer {
   margin: 2em 0;
   color: #9e0221;
   background: white;
-  border: solid 1px #9e0221;
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.22);
   height: 200px;
 }
 
 .user_image {
   border-radius: 50%;
-  border: 3px #9e0221 solid;
+  border: 2px #9e0221 solid;
   margin-top: 3rem;
   margin-left: 1rem;
 }
@@ -528,11 +527,6 @@ footer {
 
 //最近の投稿//
 
-.ramen-post {
-  margin: 5px;
-  width: 320px;
-}
-
 .three_col {
   width: 300px;
 }
@@ -634,14 +628,15 @@ footer {
 //検索//
 
 .search-brock {
-  width: 700px;
-  margin: auto;
+  width: 770px;
+  margin: 0 auto;
   border: 2px dotted #9e0221;
   border-radius: 5%;
   padding: 2rem;
 }
 .search-field {
   width: 700px;
+  margin: 0 auto;
 }
 .search-title {
   color: #232323;
@@ -653,6 +648,31 @@ footer {
   font-size: 1.1rem;
 }
 
+.search-form {
+  margin-left: 0px;
+}
+
 .btn-search {
-  margin-top: 10px;
+  margin-top: 20px;
+  justify-content: space-around;
+}
+
+.search-col {
+  height: 610px;
+}
+
+.search-label {
+  padding-left: 0.5rem;
+}
+
+.form-search-check {
+  width: 108px;
+}
+
+.form-new-check {
+  width: 108px;
+}
+
+.new-field {
+  width: 650px;
 }

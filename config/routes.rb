@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   post   '/',                       to:"pages#index"
   post   'pages/guest_sign_in',     to:"pages#guest_sign_in"
   get    'pages/show'
+  get    'pages/about'
   get    '/ramens/search',          to: "ramens#search"
   post   '/ramens/:ramen_id/likes', to: "likes#create"
   delete '/ramens/:ramen_id/likes', to: "likes#destroy"
