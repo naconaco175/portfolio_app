@@ -1,69 +1,65 @@
-<div class="row">
-  <div class="col align-self-center ramen_post">
-    <div class="ramen_image">
-      <%= image_tag ramen.photo.variant(gravity: "Center", resize:"400x250^",crop:"400x250+0+0").processed,alt: "ramen_image", class: "ramen_image d-block mx-auto"%>
+<div class="ramen_image">
+  <%= image_tag ramen.photo.variant(gravity: "Center", resize:"400x250^",crop:"400x250+0+0").processed,alt: "ramen_image", class: "ramen_image d-block mx-auto"%>
+</div>
+<div class="ramen_info">
+  <h3 class="ramen_store"><%= ramen.store %></h3>
+  <div class="rigth-content">
+    <p class="ramen_name"><%= ramen.product_name %></p>
+    / <p class="ramen_price">¥ <%= ramen.price %></p>
+  </div>
+  <div class="ramen_comment">
+    <p><%= ramen.comment %></p>
+  </div>
+  <div class="ramen-details">
+    　<span class="detail-title">詳細情報</span>
+    <ul>
+      <p class="ramen-detail form-label form-show-label">総合評価
+      <div class="ramen-detail-info"><%= ramen.evaluation %>点</div>
+      </p>
+      <p class="ramen-detail form-label form-show-label">ジャンル
+      <div class="ramen-detail-info"><%= ramen.genre %></div>
+      </p>
+      <p class="ramen-detail form-label form-show-label">スープ
+      <div class="ramen-detail-info"><%= ramen.soup %></div>
+      </p>
+      <p class="ramen-detail form-label form-show-label">味
+      <div class="ramen-detail-info"><%= ramen.taste %></div>
+      </p>
+      <p class="ramen-detail form-label form-show-label">ボリューム
+      <div class="ramen-detail-info"><%= ramen.volume %></div>
+      </p>
+      <p class="ramen-detail form-label form-show-label">麺の太さ
+      <div class="ramen-detail-info"><%= ramen.noodle %></div>
+      </p>
+      <p class="ramen-detail form-label form-show-label">油の量
+      <div class="ramen-detail-info"><%= ramen.oily %></div>
+      </p>
+      <p class="ramen-detail form-label form-show-label">チャーシュー
+      <div class="ramen-detail-info"><%= ramen.meat %></div>
+      </p>
+      <p class="ramen-detail form-label form-show-label">トッピングの量
+      <div class="ramen-detail-info"><%= ramen.topping %></div>
+      </p>
+      <p class="ramen-detail form-label form-show-label">中毒性
+      <div class="ramen-detail-info"><%= ramen.addictive %></div>
+      </p>
+      <p class="ramen-detail form-label form-show-label">混雑度
+      <div class="ramen-detail-info"><%= ramen.croweded %></div>
+      </p>
+      <p class="ramen-detail form-label form-show-label">サービス
+      <div class="ramen-detail-info"><%= ramen.service %></div>
+      </p>
+    </ul>
+  </div>
+  <p class="ramen-time">投稿日: <%= ramen.created_at.strftime('%Y/%m/%d') %></p>
+  <% if ramen.user_id == current_user.id %>
+  <div class="row">
+    <div class="col col-2">
+      <%= link_to "編集", edit_ramen_path(ramen), class: "btn btn-danger btn-sm ramen_btn" %>
     </div>
-    <div class="ramen_info">
-      <h3 class="ramen_store"><%= ramen.store %></h3>
-      <div class="rigth-content">
-        <p class="ramen_name"><%= ramen.product_name %></p>
-        / <p class="ramen_price">¥ <%= ramen.price %></p>
-      </div>
-      <div class="ramen_comment">
-        <p><%= ramen.comment %></p>
-      </div>
-      <div class="ramen-details">
-        　<span class="detail-title">詳細情報</span>
-        <ul>
-          <p class="ramen-detail">総合評価：
-          <div class="ramen-detail-info"><%= ramen.evaluation %>点</div>
-          </p>
-          <p class="ramen-detail">ジャンル：
-          <div class="ramen-detail-info"><%= ramen.genre %></div>
-          </p>
-          <p class="ramen-detail">スープ：
-          <div class="ramen-detail-info"><%= ramen.soup %></div>
-          </p>
-          <p class="ramen-detail">味：
-          <div class="ramen-detail-info"><%= ramen.taste %></div>
-          </p>
-          <p class="ramen-detail">ボリューム：
-          <div class="ramen-detail-info"><%= ramen.volume %></div>
-          </p>
-          <p class="ramen-detail">麺の太さ：
-          <div class="ramen-detail-info"><%= ramen.noodle %></div>
-          </p>
-          <p class="ramen-detail">油の量：
-          <div class="ramen-detail-info"><%= ramen.oily %></div>
-          </p>
-          <p class="ramen-detail">チャーシュー：
-          <div class="ramen-detail-info"><%= ramen.meat %></div>
-          </p>
-          <p class="ramen-detail">トッピングの量：
-          <div class="ramen-detail-info"><%= ramen.topping %></div>
-          </p>
-          <p class="ramen-detail">中毒性：
-          <div class="ramen-detail-info"><%= ramen.addictive %></div>
-          </p>
-          <p class="ramen-detail">混雑度：
-          <div class="ramen-detail-info"><%= ramen.croweded %></div>
-          </p>
-          <p class="ramen-detail">サービス：
-          <div class="ramen-detail-info"><%= ramen.service %></div>
-          </p>
-        </ul>
-      </div>
-      <p class="ramen-time">投稿日: <%= ramen.created_at.strftime('%Y/%m/%d') %></p>
-      <% if ramen.user_id == current_user.id %>
-      <div class="row">
-        <div class="col col-2">
-          <%= link_to "編集", edit_ramen_path(ramen), class: "btn btn-danger btn-sm ramen_btn" %>
-        </div>
-        <div class="col col-2">
-          <%= link_to "削除", ramen_path(ramen), method: :delete,　data: { confirm: "本当に削除してもいいですか?" }, class: "btn btn-danger btn-sm ramen_btn" %>
-        </div>
-      </div>
-      <% end %>
+    <div class="col col-2">
+      <%= link_to "削除", ramen_path(ramen), method: :delete,　data: { confirm: "本当に削除してもいいですか?" }, class: "btn btn-danger btn-sm ramen_btn" %>
     </div>
   </div>
+  <% end %>
 </div>
