@@ -1,4 +1,4 @@
-<div class="form-size field">
+<div class="form-size field new-field">
   <div class="form-group field">
     <%= f.label :店名（※必須） %><br />
     <%= f.text_field :store, autofocus: true, autocomplete: "email", class: "form-control", placeholder: "店名を入力してください(20文字以内)" %>
@@ -49,25 +49,25 @@
       <div class="form-label">
         <%= f.label :味 %><br />
       </div>
-      <div class="form-check form-check-inline">
+      <div class="form-check form-check-inline form-new-check">
         <%= f.radio_button :taste, "とてもあっさり", autofocus: true, class: "form-check-input" %>
-        <%= f.label :とてもあっさり, class: "form-check-label" %>
+        <%= f.label :とてもあっさり, class: "form-check-label search-label" %>
       </div>
-      <div class="form-check form-check-inline">
+      <div class="form-check form-check-inline form-new-check">
         <%= f.radio_button :taste, "あっさり", autofocus: true, class: "form-check-input" %>
-        <%= f.label :あっさり, class: "form-check-label" %>
+        <%= f.label :あっさり, class: "form-check-label search-label" %>
       </div>
-      <div class="form-check form-check-inline">
+      <div class="form-check form-check-inline form-new-check">
         <%= f.radio_button :taste, "普通", autofocus: true, class: "form-check-input" %>
-        <%= f.label :普通, class: "form-check-label" %>
+        <%= f.label :普通, class: "form-check-label search-label" %>
       </div>
-      <div class="form-check form-check-inline">
+      <div class="form-check form-check-inline form-new-check">
         <%= f.radio_button :taste, "濃いめ", autofocus: true, class: "form-check-input" %>
-        <%= f.label :濃いめ, class: "form-check-label" %>
+        <%= f.label :濃いめ, class: "form-check-label search-label" %>
       </div>
-      <div class="form-check form-check-inline">
+      <div class="form-check form-check-inline form-new-check">
         <%= f.radio_button :taste, "特濃", autofocus: true, class: "form-check-input" %>
-        <%= f.label :特濃, class: "form-check-label" %>
+        <%= f.label :特濃, class: "form-check-label search-label" %>
       </div>
     </div>
 
@@ -75,21 +75,21 @@
       <div class="form-label">
         <%= f.label :ボリューム %><br />
       </div>
-      <div class="form-check form-check-inline">
+      <div class="form-check form-check-inline form-new-check">
         <%= f.radio_button :volume, "小盛り", autofocus: true, class: "form-check-input" %>
-        <%= f.label :小盛り, class: "form-check-label" %>
+        <%= f.label :小盛り, class: "form-check-label search-label" %>
       </div>
-      <div class="form-check form-check-inline">
+      <div class="form-check form-check-inline form-new-check">
         <%= f.radio_button :volume, "普通", autofocus: true, class: "form-check-input" %>
-        <%= f.label :普通, class: "form-check-label" %>
+        <%= f.label :普通, class: "form-check-label search-label" %>
       </div>
-      <div class="form-check form-check-inline">
+      <div class="form-check form-check-inline form-new-check">
         <%= f.radio_button :volume, "大盛り", autofocus: true, class: "form-check-input" %>
-        <%= f.label :大盛り, class: "form-check-label" %>
+        <%= f.label :大盛り, class: "form-check-label search-label" %>
       </div>
-      <div class="form-check form-check-inline">
+      <div class="form-check form-check-inline form-new-check">
         <%= f.radio_button :volume, "特盛", autofocus: true, class: "form-check-input" %>
-        <%= f.label :特盛, class: "form-check-label" %>
+        <%= f.label :特盛, class: "form-check-label search-label" %>
       </div>
     </div>
 
@@ -97,25 +97,25 @@
       <div class="form-label">
         <%= f.label :麺の太さ %><br />
       </div>
-      <div class="form-check form-check-inline">
+      <div class="form-check form-check-inline form-new-check">
         <%= f.radio_button :noodle, "細麺", autofocus: true, class: "form-check-input" %>
-        <%= f.label :細麺, class: "form-check-label" %>
+        <%= f.label :細麺, class: "form-check-label search-label" %>
       </div>
-      <div class="form-check form-check-inline">
+      <div class="form-check form-check-inline form-new-check">
         <%= f.radio_button :noodle, "中太", autofocus: true, class: "form-check-input" %>
-        <%= f.label :中太, class: "form-check-label" %>
+        <%= f.label :中太, class: "form-check-label search-label" %>
       </div>
-      <div class="form-check form-check-inline">
+      <div class="form-check form-check-inline form-new-check">
         <%= f.radio_button :noodle, "太麺", autofocus: true, class: "form-check-input" %>
-        <%= f.label :太麺, class: "form-check-label" %>
+        <%= f.label :太麺, class: "form-check-label search-label" %>
       </div>
-      <div class="form-check form-check-inline">
+      <div class="form-check form-check-inline form-new-check">
         <%= f.radio_button :noodle, "平打ち麺", autofocus: true, class: "form-check-input" %>
-        <%= f.label :平打ち麺, class: "form-check-label" %>
+        <%= f.label :平打ち麺, class: "form-check-label search-label" %>
       </div>
-      <div class="form-check form-check-inline">
+      <div class="form-check form-check-inline form-new-check">
         <%= f.radio_button :noodle, "ちぢれ麺", autofocus: true, class: "form-check-input" %>
-        <%= f.label :ちぢれ麺, class: "form-check-label" %>
+        <%= f.label :ちぢれ麺, class: "form-check-label search-label" %>
       </div>
     </div>
 
@@ -123,21 +123,21 @@
       <div class="form-label">
         <%= f.label :油の量 %><br />
       </div>
-      <div class="form-check form-check-inline">
+      <div class="form-check form-check-inline form-new-check">
         <%= f.radio_button :oily, "少なめ", autofocus: true, class: "form-check-input" %>
-        <%= f.label :少なめ, class: "form-check-label" %>
+        <%= f.label :少なめ, class: "form-check-label search-label" %>
       </div>
-      <div class="form-check form-check-inline">
+      <div class="form-check form-check-inline form-new-check">
         <%= f.radio_button :oily, "普通", autofocus: true, class: "form-check-input" %>
-        <%= f.label :普通, class: "form-check-label" %>
+        <%= f.label :普通, class: "form-check-label search-label" %>
       </div>
-      <div class="form-check form-check-inline">
+      <div class="form-check form-check-inline form-new-check">
         <%= f.radio_button :oily, "多め", autofocus: true, class: "form-check-input" %>
-        <%= f.label :多め, class: "form-check-label" %>
+        <%= f.label :多め, class: "form-check-label search-label" %>
       </div>
-      <div class="form-check form-check-inline">
+      <div class="form-check form-check-inline form-new-check">
         <%= f.radio_button :oily, "ギトギト", autofocus: true, class: "form-check-input" %>
-        <%= f.label :ギトギト, class: "form-check-label" %>
+        <%= f.label :ギトギト, class: "form-check-label search-label" %>
       </div>
     </div>
 
@@ -145,25 +145,25 @@
       <div class="form-label">
         <%= f.label :チャーシュー %><br />
       </div>
-      <div class="form-check form-check-inline">
+      <div class="form-check form-check-inline form-new-check">
         <%= f.radio_button :meat, "なし", autofocus: true, class: "form-check-input" %>
-        <%= f.label :なし, class: "form-check-label" %>
+        <%= f.label :なし, class: "form-check-label search-label" %>
       </div>
-      <div class="form-check form-check-inline">
+      <div class="form-check form-check-inline form-new-check">
         <%= f.radio_button :meat, "薄切り", autofocus: true, class: "form-check-input" %>
-        <%= f.label :薄切り, class: "form-check-label" %>
+        <%= f.label :薄切り, class: "form-check-label search-label" %>
       </div>
-      <div class="form-check form-check-inline">
+      <div class="form-check form-check-inline form-new-check">
         <%= f.radio_button :meat, "普通", autofocus: true, class: "form-check-input" %>
-        <%= f.label :普通, class: "form-check-label" %>
+        <%= f.label :普通, class: "form-check-label search-label" %>
       </div>
-      <div class="form-check form-check-inline">
+      <div class="form-check form-check-inline form-new-check">
         <%= f.radio_button :meat, "厚切り", autofocus: true, class: "form-check-input" %>
-        <%= f.label :厚切り, class: "form-check-label" %>
+        <%= f.label :厚切り, class: "form-check-label search-label" %>
       </div>
-      <div class="form-check form-check-inline">
+      <div class="form-check form-check-inline form-new-check">
         <%= f.radio_button :meat, "極厚", autofocus: true, class: "form-check-input" %>
-        <%= f.label :極厚, class: "form-check-label" %>
+        <%= f.label :極厚, class: "form-check-label search-label" %>
       </div>
     </div>
 
@@ -171,25 +171,25 @@
       <div class="form-label">
         <%= f.label :トッピングの量 %><br />
       </div>
-      <div class="form-check form-check-inline">
+      <div class="form-check form-check-inline form-new-check">
         <%= f.radio_button :topping, "なし", autofocus: true, class: "form-check-input" %>
-        <%= f.label :なし, class: "form-check-label" %>
+        <%= f.label :なし, class: "form-check-label search-label" %>
       </div>
-      <div class="form-check form-check-inline">
+      <div class="form-check form-check-inline form-new-check">
         <%= f.radio_button :topping, "少なめ", autofocus: true, class: "form-check-input" %>
-        <%= f.label :少なめ, class: "form-check-label" %>
+        <%= f.label :少なめ, class: "form-check-label search-label" %>
       </div>
-      <div class="form-check form-check-inline">
+      <div class="form-check form-check-inline form-new-check">
         <%= f.radio_button :topping, "普通", autofocus: true, class: "form-check-input" %>
-        <%= f.label :普通, class: "form-check-label" %>
+        <%= f.label :普通, class: "form-check-label search-label" %>
       </div>
-      <div class="form-check form-check-inline">
+      <div class="form-check form-check-inline form-new-check">
         <%= f.radio_button :topping, "多め", autofocus: true, class: "form-check-input" %>
-        <%= f.label :多め, class: "form-check-label" %>
+        <%= f.label :多め, class: "form-check-label search-label" %>
       </div>
-      <div class="form-check form-check-inline">
+      <div class="form-check form-check-inline form-new-check">
         <%= f.radio_button :topping, "特盛", autofocus: true, class: "form-check-input" %>
-        <%= f.label :特盛, class: "form-check-label" %>
+        <%= f.label :特盛, class: "form-check-label search-label" %>
       </div>
     </div>
 
@@ -197,21 +197,21 @@
       <div class="form-label">
         <%= f.label :中毒性 %><br />
       </div>
-      <div class="form-check form-check-inline">
+      <div class="form-check form-check-inline form-new-check">
         <%= f.radio_button :addictive, "なし", autofocus: true, class: "form-check-input" %>
-        <%= f.label :なし, class: "form-check-label" %>
+        <%= f.label :なし, class: "form-check-label search-label" %>
       </div>
-      <div class="form-check form-check-inline">
+      <div class="form-check form-check-inline form-new-check">
         <%= f.radio_button :addictive, "ややあり", autofocus: true, class: "form-check-input" %>
-        <%= f.label :ややあり, class: "form-check-label" %>
+        <%= f.label :ややあり, class: "form-check-label search-label" %>
       </div>
-      <div class="form-check form-check-inline">
+      <div class="form-check form-check-inline form-new-check">
         <%= f.radio_button :addictive, "あり", autofocus: true, class: "form-check-input" %>
-        <%= f.label :あり, class: "form-check-label" %>
+        <%= f.label :あり, class: "form-check-label search-label" %>
       </div>
-      <div class="form-check form-check-inline">
+      <div class="form-check form-check-inline form-new-check">
         <%= f.radio_button :addictive, "猛毒", autofocus: true, class: "form-check-input" %>
-        <%= f.label :猛毒, class: "form-check-label" %>
+        <%= f.label :猛毒, class: "form-check-label search-label" %>
       </div>
     </div>
 
@@ -219,25 +219,25 @@
       <div class="form-label">
         <%= f.label :混雑度 %><br />
       </div>
-      <div class="form-check form-check-inline">
+      <div class="form-check form-check-inline form-new-check">
         <%= f.radio_button :croweded, "空いている", autofocus: true, class: "form-check-input" %>
-        <%= f.label :空いている, class: "form-check-label" %>
+        <%= f.label :空いている, class: "form-check-label search-label" %>
       </div>
-      <div class="form-check form-check-inline">
+      <div class="form-check form-check-inline form-new-check">
         <%= f.radio_button :croweded, "やや空いている", autofocus: true, class: "form-check-input" %>
-        <%= f.label :やや空いている, class: "form-check-label" %>
+        <%= f.label :やや空いている, class: "form-check-label search-label" %>
       </div>
-      <div class="form-check form-check-inline">
+      <div class="form-check form-check-inline form-new-check">
         <%= f.radio_button :croweded, "普通", autofocus: true, class: "form-check-input" %>
-        <%= f.label :普通, class: "form-check-label" %>
+        <%= f.label :普通, class: "form-check-label search-label" %>
       </div>
-      <div class="form-check form-check-inline">
+      <div class="form-check form-check-inline form-new-check">
         <%= f.radio_button :croweded, "やや混雑", autofocus: true, class: "form-check-input" %>
-        <%= f.label :やや混雑, class: "form-check-label" %>
+        <%= f.label :やや混雑, class: "form-check-label search-label" %>
       </div>
-      <div class="form-check form-check-inline">
+      <div class="form-check form-check-inline form-new-check">
         <%= f.radio_button :croweded, "激混み", autofocus: true, class: "form-check-input" %>
-        <%= f.label :激混み, class: "form-check-label" %>
+        <%= f.label :激混み, class: "form-check-label search-label" %>
       </div>
     </div>
 
@@ -245,25 +245,25 @@
       <div class="form-label">
         <%= f.label :サービス %><br />
       </div>
-      <div class="form-check form-check-inline">
+      <div class="form-check form-check-inline form-new-check">
         <%= f.radio_button :service, "良くない", autofocus: true, class: "form-check-input" %>
-        <%= f.label :良くない, class: "form-check-label" %>
+        <%= f.label :良くない, class: "form-check-label search-label" %>
       </div>
-      <div class="form-check form-check-inline">
+      <div class="form-check form-check-inline form-new-check">
         <%= f.radio_button :service, "あまり良くない", autofocus: true, class: "form-check-input" %>
-        <%= f.label :あまり良くない, class: "form-check-label" %>
+        <%= f.label :あまり良くない, class: "form-check-label search-label" %>
       </div>
-      <div class="form-check form-check-inline">
+      <div class="form-check form-check-inline form-new-check">
         <%= f.radio_button :service, "普通", autofocus: true, class: "form-check-input" %>
-        <%= f.label :普通, class: "form-check-label" %>
+        <%= f.label :普通, class: "form-check-label search-label" %>
       </div>
-      <div class="form-check form-check-inline">
+      <div class="form-check form-check-inline form-new-check">
         <%= f.radio_button :service, "良い", autofocus: true, class: "form-check-input" %>
-        <%= f.label :良い, class: "form-check-label" %>
+        <%= f.label :良い, class: "form-check-label search-label" %>
       </div>
-      <div class="form-check form-check-inline">
+      <div class="form-check form-check-inline form-new-check">
         <%= f.radio_button :service, "とても良い", autofocus: true, class: "form-check-input" %>
-        <%= f.label :とても良い, class: "form-check-label" %>
+        <%= f.label :とても良い, class: "form-check-label search-label" %>
       </div>
     </div>
   </div>
