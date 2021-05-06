@@ -1,4 +1,4 @@
-<div class="col-sm-6 col-md-4">
+<div class="col-sm-6 col-md-4 col-outline">
   <div class="ramen_image">
     <%= image_tag ramen.photo.variant(gravity: "Center", resize:"300x250^",crop:"300x250+0+0").processed,alt: "ramen_image", class: "ramen_image d-block mx-auto"%>
   </div>
@@ -17,7 +17,7 @@
         <p><%= ramen.comment %></p>
       </div>
     </div>
-    <div class="row">
+    <div class="row ramen-col-bottom">
       <div class="col col-1">
         <%= link_to "詳細", ramen_path(ramen), class: "btn btn-danger btn-sm ramen_btn sm-btn" %>
       </div>

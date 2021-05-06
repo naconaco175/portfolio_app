@@ -1,19 +1,22 @@
 # 麺道
 
-ラーメン専用の情報共有サービスです。<br >
-自分の食べたラーメンのお店の情報や感想をみんなに写真付きで共有できます。<br >
-そして、いろんな人のラーメン情報を見て、自分の好みのラーメンと出会うことができます。<br >
-レスポンシブ対応しているのでスマホからもご確認いただけます。<br >
+このサービスでは、**自分の食べたラーメンのお店の情報や感想**をみんなに写真付きで共有できます。<br >
 
-<!-- <img width="1400" alt="スクリーンショット 2020-05-07 0 06 18" src="https://user-images.githubusercontent.com/60876388/81193748-c51d9b00-8ff6-11ea-9981-46789f016300.png">
-<img width="350" height="700" src= "https://user-images.githubusercontent.com/60876388/81476543-643bd000-924d-11ea-9d26-cac305ca9f91.jpeg"> -->
+そして、集約されたのラーメンの情報の中から<br >
+**あなたの人生史上最高のラーメン**を見つけることができます。<br >
 
-# URL
+私のおすすめのラーメンも投稿しているので<br >
+ぜひ下記の URL からサービスを使ってみてください
 
-<!-- http://the-view.work/ <br > -->
-<br>
+http://www.fazy.work/ <br >
+
+また、レスポンシブ対応しているのでスマホからもご確認いただけます。<br >
+
 トップページ中央にあるゲストログインボタンから、メールアドレスとパスワードを入力せずにログインできます。
 Twitter でのログインも可能です。
+
+<img width="1000" alt="スクリーンショット 2021-05-06 23 01 09" src="https://user-images.githubusercontent.com/73275122/117311646-54d27f80-aebf-11eb-8cab-e2298da5f559.png">
+<img width="1000" alt="スクリーンショット 2021-05-06 23 03 07" src="https://user-images.githubusercontent.com/73275122/117311757-73d11180-aebf-11eb-9eab-bcda48276684.png">
 
 # 使用技術
 
@@ -22,6 +25,7 @@ Twitter でのログインも可能です。
 - MySQL2 0.5.3
 - HTML/CSS
 - Bootstrap4
+- Javascript
 - Nginx
 - Unicorn
 - AWS
@@ -43,10 +47,7 @@ Twitter でのログインも可能です。
 - いいね機能(Ajax)
   - ランキング機能
 - ページネーション機能（kaminari）
-
-# AWS 構成図
-
-<!-- <img width="995" alt="スクリーンショット 2020-05-07 11 14 01" src="https://user-images.githubusercontent.com/60876388/81247155-3ccde300-9054-11ea-91eb-d06eb38a63b3.png"> -->
+- 検索機能
 
 # テスト
 
@@ -59,23 +60,21 @@ Twitter でのログインも可能です。
 
 # 麺道（MENDOU）
 
-This web application is service specializes in ra-men shop information<br >
+This web application is service specializes in ra-men shop information<br>
 You can share the comments, photos and information about ra-men shops which you have visited, .<br >
 Furthermore,、you would find the best ra-men shop for you in a lot of information which other users shared.
 You can use this application with your smartphone, because the app is compatible with smartphone..<br >
-<img width="1400" alt="" src="">
-<img width="350" height="700" src= "">
 
-# URL
+http://www.fazy.work/ <br >
 
-http://<br >
-you can login the app not only without your mail add ｒ ess 　 and password, if you click the guest login button on the page of center, but also with your twitter account.
+you can login the app not only without your mail address and password, if you click the guest login button on the page of center, but also with your twitter account.
 
 # Technology used
 
 - Ruby
 - Ruby on Rails
 - MySQL
+- Javascript
 - HTML/CSS
 - Bootstrap4
 - Nginx
@@ -99,10 +98,11 @@ you can login the app not only without your mail add ｒ ess 　 and password, i
 - Good button function(Ajax)
   - lanking function
 - pagenation function（kaminari）
+- Search function
 
-# AWS configuration
+# Test
 
 - RSpec
   - Single test(model)
   - Function test(request)
-  - Integration test(system))
+  - Integration test(system)
