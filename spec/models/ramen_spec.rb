@@ -19,13 +19,6 @@ RSpec.describe Ramen, type: :model do
       expect(ramen.errors.messages[:comment]).to include("を入力してください")
     end
 
-    it "photoがない場合、無効である" do
-      ramen = create(:ramen)
-      ramen.photo.destroy
-      ramen.valid?
-      expect(ramen.errors.messages[:photo]).to include("画像を添付してください")
-    end
-
     it "storeが20文字以上の場合無効である" do
       ramen = build(:ramen, store: "a" * 21 )
       ramen.valid?
