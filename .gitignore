@@ -10,6 +10,9 @@
 # Ignore bundler config.
 /.bundle
 
+# Ignore device.rb
+/config/initializers/devise.rb
+
 # Ignore all logfiles and tempfiles.
 /log/*
 /tmp/*
