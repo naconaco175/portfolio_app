@@ -1,9 +1,0 @@
-<% if Like.find_by(user_id: current_user.id, ramen_id: ramen.id) %>
-<%= link_to "/ramens/#{ramen.id}/likes", method: :delete, remote: true do %>
-<p class="like-count"><i class="fas fa-heart like-btn fa-2x"><%= ramen.likes.length %></i></p>
-<% end %>
-<% else %>
-<%= link_to "/ramens/#{ramen.id}/likes", method: :post, remote: true do %>
-<p class="like-count"><i class="far fa-heart unlike-btn fa-2x"><%= ramen.likes.length %></i></p>
-<% end %>
-<% end %>
