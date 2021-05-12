@@ -7,9 +7,6 @@
 # Ignore volums
 /db/mysql/*
 
-#twitter API key
-/config/initializers/devise.rb
-
 # Ignore bundler config.
 /.bundle
 
