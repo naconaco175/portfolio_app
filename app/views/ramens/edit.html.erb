@@ -1,0 +1,12 @@
+<% provide(:title, "投稿の編集")%>
+<div class="row white-container">
+  <div class="col mx-auto">
+    <h2 class="title black-text-title">投稿の編集</h2>
+    <div class="mx-auto" style="width: 600px;">
+      <%= form_for(@ramen, url: ramen_path(@ramen)) do |f| %>
+      <%= render 'ramen_error_messages'%>
+      <%= render 'ramen_column', f: f %>
+      <% end %>
+    </div>
+  </div>
+</div>

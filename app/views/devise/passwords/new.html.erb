@@ -1,0 +1,22 @@
+<% provide(:title, "パスワード再設定")%>
+<div class="row white-container">
+  <div class="col align-self-center">
+    <h2 class="title black-text-title">パスワード再設定</h2>
+
+    <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+    <div class="col align-self-center form-size field">
+      <%= render "devise/shared/error_messages", resource: resource %>
+
+      <div class="form-group field">
+        <%= f.label :メールアドレス %><br />
+        <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control" %>
+      </div>
+      <div class="btn-center" type="submit">
+        <%= f.submit "パスワード再設定メールを送信", class: "btn btn-primary submit-btn" %>
+      </div>
+      <%= render "devise/shared/links" %>
+    </div>
+    <% end %>
+
+  </div>
+</div>

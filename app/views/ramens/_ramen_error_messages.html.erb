@@ -1,0 +1,12 @@
+<% if @ramen.errors.any? %>
+<div id="error_explanation">
+  <div class="ramen_error error-count">
+    <%= pluralize(@ramen.errors.count, "件") %>のエラーが含まれいます。
+  </div>
+  <ul>
+    <% @ramen.errors.full_messages.each do |msg| %>
+    <li class="error-msg"><%= msg %></li>
+    <% end %>
+  </ul>
+</div>
+<% end %>

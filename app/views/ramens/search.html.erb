@@ -1,0 +1,18 @@
+<% provide(:title, "検索") %>
+<div class="row white-container">
+  <div class="col align-self-center">
+    <h2 class="title black-text-title">ラーメン検索</h2>
+    <div class="search-brock">
+      <%= render 'search_box' %>
+    </div>
+    <div class="row white-container">
+      <div class="col align-self-center">
+        <h2 class="title black-text-title">検索結果</h2>
+        <%= render partial: 'pages/ramens', collection: @ramens, as: :ramen %>
+      </div>
+    </div>
+    <div class="paginate">
+      <%= paginate @ramens%>
+    </div>
+  </div>
+</div>

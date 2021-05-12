@@ -1,0 +1,15 @@
+<div class="jumbotron text-center">
+  <div class="col align-self-center">
+    <h3 class="mendou-font">あなたの人生最高の一杯をここでみつけよう</h3>
+    <% unless user_signed_in? %>
+    <%= link_to "はじめる", new_user_session_path, class: "btn btn-flat-border" %><br />
+    <%= link_to "テストログイン", pages_guest_sign_in_path, method: :post, class: "btn btn-flat-border test-login" %>
+    <% end %>
+  </div>
+</div>
+<div class="text-center red-container">
+  <h2 class="title" , id="about">ABOUT</h2>
+  <p class="title-msg">
+    このサービスでは、ラーメンを愛する者たちが集い<br>自分の食べたラーメンを共有することができます。<br>また、蓄積されたラーメンデータベースの中から<br>あなたが求める最高のラーメンを探し出すこともできます。
+  </p>
+</div>
